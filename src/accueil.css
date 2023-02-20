@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-around;
   height: 40%;
-  max-width: 3%;
+  max-width: 42%;
   margin-bottom: -35%;
   margin-right: 50%;
 }
@@ -34,8 +34,8 @@
   display: flex;
   justify-content: space-around;
   height: 40%;
-  max-width: 30%;
-  margin-bottom: -20%;
+  max-width: 42%;
+  margin-bottom: -10%;
   margin-left: 50%;
 }
 
