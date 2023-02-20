@@ -1,0 +1,166 @@
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #ffffff;
+  background-color: #f5f5f5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #f5f5f5;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f5f5f5;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* Media queries */
+@media (max-width: 640px) {
+  .textLogin {
+    font-size: 150%;
+  }
+  .textInscription {
+    font-size: 150%;
+  }
+  .logoContent img {
+    width: 40%;
+  }
+
+  .choixContent {
+    font-size: 95%;
+  }
+  .Content {
+    width: 100%;
+  }
+  .logoContent {
+    padding: 0 1em;
+  }
+  hr {
+    width: 100%;
+    margin-top: 1em;
+  }
+  input {
+    width: 90%;
+  }
+  button {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .textLogin {
+    font-size: 200%;
+  }
+  .textInscription {
+    font-size: 150%;
+  }
+  .logoContent img {
+    width: 50%;
+  }
+  .inputContent {
+    margin-top: 2.5em;
+  }
+  .choixContent {
+    font-size: 150%;
+  }
+  .Content {
+    width: 100%;
+  }
+  .logoContent {
+    padding: 0 1.5em;
+  }
+  hr {
+    width: 30em;
+  }
+  input {
+    width: 25em;
+  }
+  button {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .textLogin {
+    font-size: 300%;
+  }
+  .textInscription {
+    font-size: 200%;
+  }
+  .logoContent img {
+    max-width: 300px;
+  }
+  .choixContent {
+    font-size: 200%;
+  }
+  .Content {
+    width: 100%;
+  }
+  .logoContent {
+    padding: 0 2em;
+  }
+  hr {
+    width: 40em;
+    margin-top: 1em;
+  }
+  input {
+    width: 35em;
+  }
+  button {
+    margin-top: 2em;
+  }
+}
+body{
+  background-color: #f5f5f5 !important;
+}
