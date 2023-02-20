@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import Login from './login';
-import Accueil from './accueil';
-import LoginCode from './loginCode';
+import Login from './page/login/login.jsx';
+import Accueil from './page/accueil/accueil.jsx';
+import LoginCode from './page/login/loginCode.jsx';
 import Template from './template';
+import Generalite from './page/generalites/generalite.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/accueil",
     element: <Accueil />,
+  },
+  {
+    path: "/generalite",
+    element: <Generalite />,
   },
   {
     path: "/template",
