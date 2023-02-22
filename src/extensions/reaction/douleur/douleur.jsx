@@ -14,51 +14,74 @@ import $ from "jquery";
 import "./douleur.css"
 import * as React from "react";
 $(document).ready(function() {
-    $(".Oui").click(function() {
-        if($(".Oui").css("filter") == "invert(0.9)")
+    $(".douleurDouleur").click(function() {
+        if($(this).children("button").css("border-color") != "rgb(207, 222, 129)")
         {
-            $(".Oui").css("filter", "invert(0%)");
+            $(this).children("button").css("border-color", "#cfde81");
         }
         else
         {
-            $(".Oui").css("filter", "invert(90%)");
-        }
-    });
-    $(".Parfois").click(function() {
-        if($(".Parfois").css("filter") == "invert(0.9)")
-        {
-            $(".Parfois").css("filter", "invert(0%)");
-        }
-        else
-        {
-            $(".Parfois").css("filter", "invert(90%)");
-        }
-    });
-    $(".Non").click(function() {
-        if($(".Non").css("filter") == "invert(0.9)")
-        {
-            $(".Non").css("filter", "invert(0%)");
-        }
-        else
-        {
-            $(".Non").css("filter", "invert(90%)");
+            $(this).children("button").css("border-color", "#f5f5f5");
         }
     });
 });
 function reactionDouleurDouleur(){
     return(
-    <div className="sentimentContent">
-        <div className="sentiment">
-            <button className="btn border-0"><img src={Oui} alt="Oui" className="Oui"/><br></br>Oui</button>
+    <div className="reactionDouleurHabitude">
+        <div class="scroll-container">
+            <div class="scroll-page" id="page-1">
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Pique} alt="Pique" className="Pique"/><br></br>Pique</button>
+                </div>
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Brule} alt="Brule" className="Brule"/><br></br>Brule</button>
+                </div>
+            </div>
+            <div class="scroll-page" id="page-2">
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Elance} alt="Elance" className="Elance"/><br></br>Elance</button>
+                </div>
+                <div className="douleurHabitude">
+                    <button className="btn"><img src={Dechire} alt="Dechire" className="Dechire"/><br></br>Dechire</button>
+                </div>
+            </div>
+            <div class="scroll-page" id="page-3">
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Etire} alt="Etire" className="Etire"/><br></br>Etire</button>
+                </div>
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Couteau} alt="Couteau" className="Couteau"/><br></br>Couteau</button>
+                </div>
+            </div>
+            <div class="scroll-page" id="page-4">
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Serre} alt="Serre" className="Serre"/><br></br>Serre</button>
+                </div>
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Coupure} alt="Coupure" className="Coupure"/><br></br>Coupure</button>
+                </div>
+            </div>
+            <div class="scroll-page" id="page-5">
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Gratte} alt="Gratte" className="Gratte"/><br></br>Gratte</button>
+                </div>
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={ChocElectrique} alt="ChocElectrique" className="ChocElectrique"/><br></br>ChocElectrique</button>
+                </div>
+            </div>
+            <div class="scroll-page" id="page-6">
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Engourdi} alt="Engourdi" className="Engourdi"/><br></br>Engourdi</button>
+                </div>
+                <div className="douleurDouleur">
+                    <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
+                </div>
+            </div>
         </div>
-        <div className="sentiment">
-            <button className="btn border-0"><img src={Parfois} alt="Parfois" className="Parfois"/><br></br>Parfois</button>
-        </div>
-        <div className="sentiment">
-            <button className="btn border-0"><img src={Non} alt="Non" className="Non"/><br></br>Non</button>
+        <div className="buttonContentLogin">
+            <button className="buttonLogin">S'inscrire</button>
         </div>
     </div>
     );
 }
-
 export default reactionDouleurDouleur;

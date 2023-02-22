@@ -1,0 +1,11 @@
+.sentiment img {
+    width: 90%;
+}
+
+.sentiment {
+    border: 0;
+}
+
+#openPopup:focus {
+    outline: none;
+}

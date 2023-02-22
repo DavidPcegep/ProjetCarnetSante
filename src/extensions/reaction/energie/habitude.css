@@ -1,13 +1,15 @@
-.douleurDouleur img {
-    width: 40%;
+.energieHabitude img {
+    width: 50%;
 }
 
-.douleurDouleur {
-    border: 0;
+.energieHabitude {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#openPopup:focus {
-    outline: none;
+.btn {
+    border-width: 1em;
 }
 
 .scroll-container {

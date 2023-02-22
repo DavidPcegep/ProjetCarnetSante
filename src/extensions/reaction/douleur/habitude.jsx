@@ -12,12 +12,10 @@ $(document).ready(function() {
     $(".douleurHabitude").click(function() {
         if($(this).children("button").css("border-color") != "rgb(207, 222, 129)")
         {
-            console.log($(this).children("button").css("border-color"));
             $(this).children("button").css("border-color", "#cfde81");
         }
         else
         {
-            console.log($(this).children("button").css("border-color"));
             $(this).children("button").css("border-color", "#f5f5f5");
         }
     });
