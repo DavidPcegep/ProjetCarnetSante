@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./accueil.css"
 import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
-import logoGeneralites from "../../assets/img/Grandes Sections et pochettes/Sans titre-1.png";
+import logoGeneralites from "../../assets/img/Grandes Sections et pochettes/Generalites.png";
 import logoRendezVous from "../../assets/img/Grandes Sections et pochettes/Rendez-vous.png";
 import logoAutoEvaluation from "../../assets/img/Grandes Sections et pochettes/Auto-evaluation.png";
 import logoGPS from "../../assets/img/Grandes Sections et pochettes/GPS.png";

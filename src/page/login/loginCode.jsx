@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./login.css"
 import { useState } from 'react';
-import backgroundLogin from '../../assets/img/Logo/BackgroundLogin.png';
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSante.png";
+import backgroundLogin from '../../assets/img/Logo/logoBackground.png';
+import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 function LoginCode() {
   const [inputs, setInputs] = useState({});
 
