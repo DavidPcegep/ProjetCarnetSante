@@ -27,6 +27,22 @@ function Generalite() {
                     <input type="text" className="form-control form-control-lg border-2" name="inputDouleurNomPrenom" placeholder="Nom" />
                     <label form="inputDouleurTelephone" >Téléphone</label>
                     <input type="text" className="form-control form-control-lg border-2" id="inputDouleurTelephone" name="inputDouleurTelephone" placeholder="Téléphone" />
+                    <label form="inputDouleurTelephone" >Groupe Sanguin</label>
+                    <select type="text" className="form-control form-control-lg border-2" id="inputDouleurTelephone" name="inputDouleurTelephone" placeholder="Téléphone">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                    <label form="inputDouleurTelephone" >Contact d'urgence </label>
+                    <input type="text" className="form-control form-control-lg border-2" id="inputDouleurTelephone" name="inputDouleurTelephone" placeholder="Contact d'urgence"/>
+                    <div className="d-flex justify-content-end">
+                    <button className="btn btn-lg btnGeneralite">Suivant</button>
+                    </div>
                 </div>
             </form>
         </div>

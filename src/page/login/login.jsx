@@ -18,7 +18,7 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://172.16.6.116:80/api/utilisateur/authentifier', {
+    fetch('http://172.16.6.116:8080/api/client/authentifier', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -61,8 +61,8 @@ function Login() {
               <div className="textLoginContent">
                 <h1 className="textLogin">Connecte-toi</h1>
               </div>
-                <input type="text" className="form-control form-control-lg" placeholder="Email" name="user" value={inputs.user || ''} onChange={handleChange}/>
-                <input type="password" className="form-control form-control-lg" placeholder="Mot de passe" name="mdp" value={inputs.mdp || ''} onChange={handleChange}/>
+                <input type="text" className="form-control form-control-lg" placeholder="Email" name="courriel" value={inputs.courriel || ''} onChange={handleChange}/>
+                <input type="password" className="form-control form-control-lg" placeholder="Mot de passe" name="motDePasse" value={inputs.motDePasse || ''} onChange={handleChange}/>
               <div className="buttonContentLogin">
                 <input type="submit" className="buttonLogin" value="Se connecter"/>
               </div>

@@ -1,6 +1,6 @@
 label{
     font-family: mitr;
-    background-color: #cfde81;
+    background-color: #fdf100;
     width: 100%;
     padding: 5px;
 }
@@ -12,8 +12,13 @@ table{
     margin: 0 !important;
 }
 
-input{
+input, select{
     margin-top: 0 !important;
     margin-bottom: 1em;
     border-radius: 0 !important;
+}
+
+.btnGeneralite{
+    background-color: #72d9d7 !important;
+    margin: 0 !important;
 }
