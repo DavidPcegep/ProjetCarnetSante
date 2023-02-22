@@ -18,7 +18,36 @@ input, select{
     border-radius: 0 !important;
 }
 
+
+
 .btnGeneralite{
     background-color: #72d9d7 !important;
     margin: 0 !important;
+}
+
+.iconNav{
+    font-size: 200% !important;
+}
+
+.navContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.navBarBrand{
+    background-color: #72d9d7;
+    display: flex;
+    justify-content: center;
+}
+
+
+.navImg{
+    width: 125%;
+}
+i{
+    color: white;
+    opacity: 0.7;
+}
+.generaliteContent{
+    overflow-y: auto !important;
 }
