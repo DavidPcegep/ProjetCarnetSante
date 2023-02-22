@@ -1,0 +1,33 @@
+.douleurHabitude img {
+    width: 60%;
+}
+
+.douleurHabitude {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    border-width: 1em;
+}
+
+.scroll-container {
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
+.scroll-container {
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+}

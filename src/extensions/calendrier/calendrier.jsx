@@ -16,6 +16,37 @@ $(document).ready(function() {
     $(".calendrierToujours").click(function() {
         $(".calendrierSouven, .calendrierParfois").css("filter", "invert(0%)");
         $(".calendrierToujours").css("filter", "invert(90%)");
+        if($(".calendrierParfois").css("filter") == "invert(0.9)")
+        {
+            $(".calendrierParfois").css("filter", "invert(0%)");
+        }
+        else
+        {
+            $(".calendrierParfois").css("filter", "invert(90%)");
+            $(".calendrierSouvent, .calendrierToujours").css("filter", "invert(0%)");
+        }
+    });
+    $(".calendrierSouvent").click(function() {
+        if($(".calendrierSouvent").css("filter") == "invert(0.9)")
+        {
+            $(".calendrierSouvent").css("filter", "invert(0%)");
+        }
+        else
+        {
+            $(".calendrierSouvent").css("filter", "invert(90%)");
+            $(".calendrierParfois, .calendrierToujours").css("filter", "invert(0%)");
+        }
+    });
+    $(".calendrierToujours").click(function() {
+        if($(".calendrierToujours").css("filter") == "invert(0.9)")
+        {
+            $(".calendrierToujours").css("filter", "invert(0%)");
+        }
+        else
+        {
+            $(".calendrierToujours").css("filter", "invert(90%)");
+            $(".calendrierParfois, .calendrierSouvent").css("filter", "invert(0%)");
+        }
     });
 });
 function calendrier(){

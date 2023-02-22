@@ -1,4 +1,4 @@
-import jaugeimg from "../../assets/img/Emotion/JaugeDouleurVierge.png";
+import jaugeimg from "../../assets/img/Emotion/JaugeDouleur.png";
 import $ from "jquery";
 import "./jauge.css"
 import * as React from "react";
