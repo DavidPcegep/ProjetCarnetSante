@@ -1,24 +1,42 @@
-import calendrierParfois from "../../assets/img/Calendrier et Eau/CalendrierParfois.png";
-import calendrierSouvent from "../../assets/img/Calendrier et Eau/CalendrierSouvent.png";
-import calendrierToujours from "../../assets/img/Calendrier et Eau/CalendrierToujours.png";
+import calendrierParfois from "../../assets/img/Calendrier/CalendrierParfois.png";
+import calendrierSouvent from "../../assets/img/Calendrier/CalendrierSouvent.png";
+import calendrierToujours from "../../assets/img/Calendrier/CalendrierToujours.png";
 import $ from "jquery";
 import "./calendrier.css"
 import * as React from "react";
 $(document).ready(function() {
     $(".calendrierParfois").click(function() {
-        $(".calendrierParfois").css("filter", "invert(90%)");
-        $(".calendrierSouvent").css("filter", "invert(0%)");
-        $(".calendrierToujours").css("filter", "invert(0%)");
+        if($(".calendrierParfois").css("filter") == "invert(0.9)")
+        {
+            $(".calendrierParfois").css("filter", "invert(0%)");
+        }
+        else
+        {
+            $(".calendrierParfois").css("filter", "invert(90%)");
+            $(".calendrierSouvent, .calendrierToujours").css("filter", "invert(0%)");
+        }
     });
     $(".calendrierSouvent").click(function() {
-        $(".calendrierParfois").css("filter", "invert(0%)");
-        $(".calendrierSouvent").css("filter", "invert(90%)");
-        $(".calendrierToujours").css("filter", "invert(0%)");
+        if($(".calendrierSouvent").css("filter") == "invert(0.9)")
+        {
+            $(".calendrierSouvent").css("filter", "invert(0%)");
+        }
+        else
+        {
+            $(".calendrierSouvent").css("filter", "invert(90%)");
+            $(".calendrierParfois, .calendrierToujours").css("filter", "invert(0%)");
+        }
     });
     $(".calendrierToujours").click(function() {
-        $(".calendrierSouvent").css("filter", "invert(0%)");
-        $(".calendrierSouvent").css("filter", "invert(0%)");
-        $(".calendrierToujours").css("filter", "invert(90%)");
+        if($(".calendrierToujours").css("filter") == "invert(0.9)")
+        {
+            $(".calendrierToujours").css("filter", "invert(0%)");
+        }
+        else
+        {
+            $(".calendrierToujours").css("filter", "invert(90%)");
+            $(".calendrierParfois, .calendrierSouvent").css("filter", "invert(0%)");
+        }
     });
 });
 function calendrier(){

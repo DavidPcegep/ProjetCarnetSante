@@ -18,8 +18,7 @@ function Generalite() {
             <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
         </div>
         <hr></hr>
-          {jauge()}
-            {jauge2()}
+          {sentiment()}
       </div>
     </div>
   );

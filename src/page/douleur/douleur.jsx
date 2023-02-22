@@ -2,6 +2,10 @@ import * as React from "react";
 import "./douleur.css";
 import jauge from "../../extensions/jauge/jauge.jsx";
 import jauge2 from "../../extensions/jauge/jauge2.jsx";
+import calendrier from "../../extensions/calendrier/calendrier.jsx";
+import sentiment from "../../extensions/sentiment/sentiment.jsx";
+import reactionDouleurHabitude from "../../extensions/reaction/douleur/habitude.jsx";
+import reactionDouleurDouleur from "../../extensions/reaction//douleur/douleur.jsx";
 import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 function Douleur() {
     return (
@@ -14,8 +18,7 @@ function Douleur() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
-            {jauge()}
-                {jauge2()}
+            {reactionDouleurHabitude()}
         </div>
         </div>
     );

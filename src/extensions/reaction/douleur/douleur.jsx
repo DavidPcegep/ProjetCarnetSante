@@ -1,8 +1,17 @@
-import Oui from "../../assets/img/EmotionSmiley/Oui.png";
-import Non from "../../assets/img/EmotionSmiley/Non.png";
-import Parfois from "../../assets/img/EmotionSmiley/Parfois.png";
+import Brule from "../../../assets/img/Douleurs/Brule.png";
+import ChocElectrique from "../../../assets/img/Douleurs/ChocElectrique.png";
+import Coupure from "../../../assets/img/Douleurs/Coupure.png";
+import Couteau from "../../../assets/img/Douleurs/Couteau.png";
+import Dechire from "../../../assets/img/Douleurs/Dechire.png";
+import Elance from "../../../assets/img/Douleurs/Elance.png";
+import Engourdi from "../../../assets/img/Douleurs/Engourdi.png";
+import Etire from "../../../assets/img/Douleurs/Etire.png";
+import Gratte from "../../../assets/img/Douleurs/Gratte.png";
+import Pique from "../../../assets/img/Douleurs/Pique.png";
+import Serre from "../../../assets/img/Douleurs/Serre.png";
+import Autres from "../../../assets/img/Douleurs/Autres.png";
 import $ from "jquery";
-import "./sentiment.css"
+import "./douleur.css"
 import * as React from "react";
 $(document).ready(function() {
     $(".Oui").click(function() {
@@ -13,7 +22,6 @@ $(document).ready(function() {
         else
         {
             $(".Oui").css("filter", "invert(90%)");
-            $(".Parfois, .Non").css("filter", "invert(0%)");
         }
     });
     $(".Parfois").click(function() {
@@ -24,7 +32,6 @@ $(document).ready(function() {
         else
         {
             $(".Parfois").css("filter", "invert(90%)");
-            $(".Oui, .Non").css("filter", "invert(0%)");
         }
     });
     $(".Non").click(function() {
@@ -35,11 +42,10 @@ $(document).ready(function() {
         else
         {
             $(".Non").css("filter", "invert(90%)");
-            $(".Oui, .Parfois").css("filter", "invert(0%)");
         }
     });
 });
-function sentiment(){
+function reactionDouleurDouleur(){
     return(
     <div className="sentimentContent">
         <div className="sentiment">
@@ -55,4 +61,4 @@ function sentiment(){
     );
 }
 
-export default sentiment;
+export default reactionDouleurDouleur;
