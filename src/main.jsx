@@ -6,6 +6,7 @@ import Accueil from './page/accueil/accueil.jsx';
 import LoginCode from './page/login/loginCode.jsx';
 import Template from './template';
 import Generalite from './page/generalites/generalite.jsx';
+import Douleur from './page/douleur/douleur.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
     path: "/template",
     element: <Template />,
   },
+  {
+    path: "/douleur",
+    element: <Douleur />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
