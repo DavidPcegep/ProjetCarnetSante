@@ -1,14 +1,14 @@
-import jaugeimg from "../../assets/img/Emotion/JaugeDouleur.png";
+import jaugeimg from "../../assets/img/Emotion/JaugeDouleurVierge.png";
 import $ from "jquery";
 import "./jauge.css"
 import * as React from "react";
 $(document).ready(function() {
     $("#jauge").on("input", function() {
-        console.log($(this).val());
         $(".cluster").css({'transform' : 'rotate(' + $(this).val()*1.8 + 'deg)'});
-        $("#clusterValue").text($(this).val()/10);
-        // change opacity of the input range
-        $(this).css("background", "opacity(" + $(this).val()/10 + ")");
+        console.log($(this).val()/10);
+        $("slider").css("background-color", "rgba(" + 255 + "," + 0 + "," + 0 + "," + $(this).val()/100 + ")");
+        var slider = $(this).addClass("slider");
+        slider.css("background", "rgba(" + 255 + "," + 0 + "," + 0 + "," + $(this).val()/100 + ")")
     });
 });
 function jauge(){
@@ -20,7 +20,7 @@ function jauge(){
                 <div className="clusterLine"></div>
             </div>
             <div id="clusterValue"></div>
-            <input type="range" id="jauge"/>
+            <input type="range" id="jauge" className="slider"/>
         </div>
     </div>
     );

@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./generalite.css"
 import jauge from "../../extensions/jauge/jauge.jsx";
+import jauge2 from "../../extensions/jauge/jauge2.jsx";
 import calendrier from "../../extensions/calendrier/calendrier.jsx";
 import sentiment from "../../extensions/sentiment/sentiment.jsx";
 import $ from "jquery";
@@ -17,7 +18,8 @@ function Generalite() {
             <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
         </div>
         <hr></hr>
-          {sentiment()}
+          {jauge()}
+            {jauge2()}
       </div>
     </div>
   );
