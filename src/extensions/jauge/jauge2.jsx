@@ -1,29 +1,29 @@
-import jaugeimg from "../../assets/img/Emotion/JaugeDouleur.png";
+import jaugeimg from "../../assets/img/Sommeil/JaugeSommeil.png";
 import $ from "jquery";
-import "./jauge2.css";
+import "./jauge.css"
 import * as React from "react";
 $(document).ready(function() {
-    $("#jauge2").on("input", function() {
-        $(".cluster2").css({'transform' : 'rotate(' + $(this).val()*1.8 + 'deg)'});
+    $("#jauge").on("input", function() {
+        $(".cluster").css({'transform' : 'rotate(' + $(this).val()*1.8 + 'deg)'});
         console.log($(this).val()/10);
-        $(".slider2").css("background-color", "rgba(" + 255 + "," + 0 + "," + 0 + "," + $(this).val()/100 + ")");
-        var slider = $(this).addClass("slider2");
+        $("slider").css("background-color", "rgba(" + 255 + "," + 0 + "," + 0 + "," + $(this).val()/100 + ")");
+        var slider = $(this).addClass("slider");
         slider.css("background", "rgba(" + 255 + "," + 0 + "," + 0 + "," + $(this).val()/100 + ")")
     });
 });
-function jauge2(){
+function jauge(){
     return(
         <div className="jaugeContent">
             <div className="jauge">
-                <input type="range" id="jauge2" className="slider2"/>
                 <img src={jaugeimg} alt="jauge"/>
-                <div className="cluster2">
-                    <div className="clusterLine2"></div>
+                <div className="cluster">
+                    <div className="clusterLine"></div>
                 </div>
                 <div id="clusterValue"></div>
+                <input type="range" id="jauge" className="slider"/>
             </div>
         </div>
     );
 }
 
-export default jauge2;
+export default jauge;
