@@ -15,7 +15,6 @@ function Douleur() {
             </div>
             <hr></hr>
             {jauge()}
-                {jauge2()}
         </div>
         </div>
     );

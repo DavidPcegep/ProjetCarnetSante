@@ -16,10 +16,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   -webkit-text-size-adjust: 100%;
 }
 
-@font-face {
-  font-family: amaranth;
-  src: url(./assets/polices/amaranth/Amaranth-Regular.otf);
-}
 
 a {
   font-weight: 500;
@@ -167,4 +163,56 @@ button {
 }
 body{
   background-color: #f5f5f5 !important;
+}
+
+
+
+@font-face {
+  font-family: amaranth;
+  src: url(./assets/polices/amaranth/Amaranth-Regular.otf);
+}
+@font-face {
+  font-family: amaranth-bold;
+  src: url(./assets/polices/amaranth/Amaranth-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: amaranth-italic;
+  src: url(./assets/polices/amaranth/Amaranth-Italic.otf);
+  font-style: italic;
+}
+@font-face {
+  font-family: amaranth-bold-italic;
+  src: url(./assets/polices/amaranth/Amaranth-BoldItalic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: mitr;
+  src: url(./assets/polices/mitr/Mitr-Regular.ttf);
+}
+@font-face {
+  font-family: mitr-bold;
+  src: url(./assets/polices/mitr/Mitr-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: mitr-extraLight;
+  src: url(./assets/polices/mitr/Mitr-ExtraLight.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: mitr-light;
+  src: url(./assets/polices/mitr/Mitr-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: mitr-medium;
+  src: url(./assets/polices/mitr/Mitr-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: mitr-semiBold;
+  src: url(./assets/polices/mitr/Mitr-SemiBold.ttf);
+  font-weight: 600;
 }

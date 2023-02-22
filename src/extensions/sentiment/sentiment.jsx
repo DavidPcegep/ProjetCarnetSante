@@ -7,17 +7,14 @@ import * as React from "react";
 $(document).ready(function() {
     $(".Oui").click(function() {
         $(".Oui").css("filter", "invert(90%)");
-        $(".Parfois").css("filter", "invert(0%)");
-        $(".Non").css("filter", "invert(0%)");
+        $(".Parfois, .Non").css("filter", "invert(0%)");
     });
     $(".Parfois").click(function() {
-        $(".Oui").css("filter", "invert(0%)");
+        $(".Oui, .Non").css("filter", "invert(0%)");
         $(".Parfois").css("filter", "invert(90%)");
-        $(".Non").css("filter", "invert(0%)");
     });
     $(".Non").click(function() {
-        $(".Oui").css("filter", "invert(0%)");
-        $(".Parfois").css("filter", "invert(0%)");
+        $(".Oui, .Parfois").css("filter", "invert(0%)");
         $(".Non").css("filter", "invert(90%)");
     });
 });

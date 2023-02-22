@@ -1,12 +1,14 @@
 import * as React from "react";
 import "./generalite.css"
-import jauge from "../../extensions/jauge/jauge.jsx";
-import jauge2 from "../../extensions/jauge/jauge2.jsx";
-import calendrier from "../../extensions/calendrier/calendrier.jsx";
-import sentiment from "../../extensions/sentiment/sentiment.jsx";
 import $ from "jquery";
 import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import Inputmask from "inputmask";
+$(document).ready(function(){
+    var inputDouleurTelephone = $("#inputDouleurTelephone");
+    var im = new Inputmask("999-999-9999");
+    im.mask(inputDouleurTelephone);
 
+});
 function Generalite() {
   return (
     <div>
@@ -18,8 +20,16 @@ function Generalite() {
             <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
         </div>
         <hr></hr>
-          {jauge()}
-            {jauge2()}
+          <div className="container">
+            <form>
+                <div className="form-control border-0">
+                    <label form="inputDouleurNomPrenom" >Nom et prénom</label>
+                    <input type="text" className="form-control form-control-lg border-2" name="inputDouleurNomPrenom" placeholder="Nom" />
+                    <label form="inputDouleurTelephone" >Téléphone</label>
+                    <input type="text" className="form-control form-control-lg border-2" id="inputDouleurTelephone" name="inputDouleurTelephone" placeholder="Téléphone" />
+                </div>
+            </form>
+        </div>
       </div>
     </div>
   );

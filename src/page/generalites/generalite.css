@@ -1,27 +1,19 @@
-.jauge{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+label{
+    font-family: mitr;
+    background-color: #cfde81;
+    width: 100%;
+    padding: 5px;
+}
+th{
+    padding: 5px;
+    background-color: #cfde81;
+}
+table{
+    margin: 0 !important;
 }
 
-.jauge img{
-    width: 75%;
-    height: 100%;
+input{
+    margin-top: 0 !important;
+    margin-bottom: 1em;
+    border-radius: 0 !important;
 }
-
-.cluster{
-    position: relative;
-    width: 50%;
-    bottom: 20px;
-    z-index: 2;
-    transform: rotate(180deg);
-    overflow: hidden;
-
-}
-.clusterLine{
-    width: 50%;
-    position: relative;
-    border-bottom: black solid 3px;
-}
-
