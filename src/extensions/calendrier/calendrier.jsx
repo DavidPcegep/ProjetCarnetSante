@@ -1,6 +1,6 @@
-import calendrierParfois from "../../assets/img/Calendrier et Eau/CalendrierParfois.png";
-import calendrierSouvent from "../../assets/img/Calendrier et Eau/CalendrierSouvent.png";
-import calendrierToujours from "../../assets/img/Calendrier et Eau/CalendrierToujours.png";
+import calendrierParfois from "../../assets/img/Calendrier/CalendrierParfois.png";
+import calendrierSouvent from "../../assets/img/Calendrier/CalendrierSouvent.png";
+import calendrierToujours from "../../assets/img/Calendrier/CalendrierToujours.png";
 import $ from "jquery";
 import "./calendrier.css"
 import * as React from "react";

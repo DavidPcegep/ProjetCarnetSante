@@ -5,6 +5,7 @@ import Login from './page/login/login.jsx';
 import Accueil from './page/accueil/accueil.jsx';
 import LoginCode from './page/login/loginCode.jsx';
 import Template from './template';
+import Ressource from './page/ressource/ressource.jsx';
 import Generalite from './page/generalites/generalite.jsx';
 import Douleur from './page/douleur/douleur.jsx';
 import {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/douleur",
     element: <Douleur />,
+  },
+  {
+    path: "/ressource",
+    element: <Ressource />,
   }
 ]);
 
