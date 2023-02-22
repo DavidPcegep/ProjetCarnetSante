@@ -2,8 +2,11 @@ import * as React from "react";
 import "./generalite.css"
 import jauge from "../../extensions/jauge/jauge.jsx";
 import jauge2 from "../../extensions/jauge/jauge2.jsx";
+import calendrier from "../../extensions/calendrier/calendrier.jsx";
+import sentiment from "../../extensions/sentiment/sentiment.jsx";
 import $ from "jquery";
 import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+
 function Generalite() {
   return (
     <div>

@@ -1,0 +1,15 @@
+.calendrier img {
+    width: 60%;
+}
+
+/* .calendrier :active img {
+    filter:invert(90%);
+} */
+
+.calendrier {
+    border: 0;
+}
+
+#openPopup:focus {
+    outline: none;
+}

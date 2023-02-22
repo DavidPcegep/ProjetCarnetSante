@@ -19,6 +19,5 @@ function Douleur() {
         </div>
         </div>
     );
-}
-
+ }
 export default Douleur;
