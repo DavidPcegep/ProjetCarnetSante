@@ -2,7 +2,7 @@ import Oui from "../../assets/img/EmotionSmiley/Oui.png";
 import Non from "../../assets/img/EmotionSmiley/Non.png";
 import Parfois from "../../assets/img/EmotionSmiley/Parfois.png";
 import $ from "jquery";
-import "./sentiment.css"
+import "./sentiment2.css"
 import * as React from "react";
 $(document).ready(function() {
     $(".Oui").click(function() {
@@ -39,14 +39,14 @@ $(document).ready(function() {
         }
     });
 });
-function sentiment(){
+function sentiment2(){
     return(
     <div className="sentimentContent">
         <div className="sentiment">
             <button className="btn border-0"><img src={Oui} alt="Oui" className="Oui"/><br></br>Oui</button>
         </div>
         <div className="sentiment">
-            <button className="btn border-0"><img src={Parfois} alt="Parfois" className="Parfois"/><br></br>Parfois</button>
+            <button className="btn border-0"><img src={Parfois} alt="Parfois" className="Parfois"/><br></br>+ ou -</button>
         </div>
         <div className="sentiment">
             <button className="btn border-0"><img src={Non} alt="Non" className="Non"/><br></br>Non</button>
@@ -55,4 +55,4 @@ function sentiment(){
     );
 }
 
-export default sentiment;
+export default sentiment2;
