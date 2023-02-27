@@ -1,0 +1,61 @@
+label{
+    font-family: mitr;
+    background-color: #fdf100;
+    width: 100%;
+    padding: 5px;
+}
+th{
+    padding: 5px;
+    background-color: #cfde81;
+}
+table{
+    margin: 0 !important;
+}
+
+input, select{
+    margin-top: 0 !important;
+    margin-bottom: 1em;
+    border-radius: 0 !important;
+}
+
+.hr {
+    color: #72d9d7;
+    border-width: 20px;
+}
+
+.btnGeneralite{
+    background-color: #72d9d7 !important;
+    margin: 0 !important;
+}
+
+.iconNav{
+    font-size: 200% !important;
+}
+
+.navContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.navBarBrand{
+    background-color: #72d9d7;
+    display: flex;
+    justify-content: center;
+}
+
+
+.navImg{
+    width: 125%;
+}
+i{
+    color: white;
+    opacity: 0.7;
+}
+.generaliteContent{
+    overflow-y: auto !important;
+}
+
+.Pression {
+    max-width: 80%;
+     
+}

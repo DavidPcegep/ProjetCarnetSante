@@ -1,11 +1,13 @@
 .sommeilHabitude img {
-    width: 90%;
+    min-width: 1em;
+    max-width: 5em;
 }
 
 .sommeilHabitude {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 40%;
 }
 
 .btn {
@@ -30,4 +32,8 @@
     align-items: center;
     justify-content: center;
     font-size: 5em;
+}
+
+.mb-5 {
+    margin-bottom: 8em;
 }
