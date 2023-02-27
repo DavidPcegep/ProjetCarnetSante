@@ -8,7 +8,7 @@ import Template from './template';
 import Generalite from './page/generalites/generalite.jsx';
 import Douleur from './page/douleur/douleur.jsx';
 import {
-  createBrowserRouter,
+  createBrowserRouter, Navigate,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
@@ -17,7 +17,8 @@ import './index.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Navigate to="/login" />,
+
   },
   {
     path: "/login",

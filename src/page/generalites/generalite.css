@@ -51,3 +51,24 @@ i{
 .generaliteContent{
     overflow-y: auto !important;
 }
+
+textarea{
+    border-radius: 0 !important;
+}
+
+#chirurgies button{
+    background-color: #002d45 !important;
+}
+
+#autreMaladieChronique ,#autreAntecedentsFamiliaux, #fruitsLegumesAllergie, #medicamentAllergie, #autreAllergie, #autreIA, #fruitsLegumesIA, #autreCIM{
+    display: none;
+}
+
+.spanGeneraliteAjouter, .inputGeneraliteAjouter{
+    height: 3em;
+}
+
+.spanGeneraliteAjouter:hover{
+    background-color: #002d45;
+    color: white;
+}
