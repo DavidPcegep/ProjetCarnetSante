@@ -25,8 +25,13 @@
     border-bottom: black solid 3px;
 }
 
-.cardRessource{
-    background-color: #72d9d7;
+.logoRessource {
+    max-width: 15%;
+  }
+
+.btnRessource{
+    background-color: #72d9d7 !important;
+    margin: 0 !important;
     width: 80%;
-    opacity: 70%;
+    font-size:large;
 }

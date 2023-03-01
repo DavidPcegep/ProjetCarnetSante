@@ -6,6 +6,10 @@ import Accueil from './page/accueil/accueil.jsx';
 import LoginCode from './page/login/loginCode.jsx';
 import Template from './template';
 import Ressource from './page/ressource/ressource.jsx';
+import Specialiste from './page/ressource/specialiste.jsx';
+import Accompagnant from './page/ressource/accompagnant';
+import Infrastructure from './page/ressource/infrastructure';
+import NumeroUrgence from './page/ressource/numeroUrgence';
 import Generalite from './page/generalites/generalite.jsx';
 import Douleur from './page/douleur/douleur.jsx';
 import {
@@ -47,6 +51,22 @@ const router = createBrowserRouter([
   {
     path: "/ressource",
     element: <Ressource />,
+  },
+  {
+    path: "/ressource/specialiste",
+    element: <Specialiste />,
+  },
+  {
+    path: "/ressource/accompagnant",
+    element: <Accompagnant />,
+  },
+  {
+    path: "/ressource/infrastructure",
+    element: <Infrastructure />,
+  },
+  {
+    path: "/ressource/numeroUrgence",
+    element: <NumeroUrgence />,
   }
 ]);
 
