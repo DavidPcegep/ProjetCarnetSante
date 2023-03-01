@@ -3,6 +3,7 @@ import "./carteHopital.css"
 import { useState } from 'react';
 import $ from "jquery";
 import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import carteHopital from "../../../assets/img/Divers/Hopital.svg";
 import Inputmask from "inputmask";
 import Navigation from "../../../extensions/navigation/navigation.jsx";
 
@@ -43,6 +44,11 @@ function CarteHopital() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
+            <div className="hopital">
+                <h3>Carte d'assurance maladie</h3>
+                <p>Le numéro important est écrit plus gros</p>
+                <img src={carteHopital} alt="carteHopital" />
+            </div>
         </div>
     </div>
   );

@@ -22,7 +22,7 @@ function Douleur() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
-            {reactionDouleurDouleur()}
+            {reactionStressHabitude()}
         </div>
         </div>
     );

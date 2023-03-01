@@ -54,3 +54,23 @@ i{
 .generaliteContent{
     overflow-y: auto !important;
 }
+
+.assuranceMaladie {
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.red {
+    color: red;
+}
+
+p {
+    text-align: center
+}
+
+h3 {
+    text-align: center
+}

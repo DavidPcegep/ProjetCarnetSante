@@ -56,6 +56,21 @@ i{
 }
 
 .Pression {
-    max-width: 80%;
-     
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.red {
+    color: red;
+}
+
+p {
+    text-align: center
+}
+
+h3 {
+    text-align: center
 }

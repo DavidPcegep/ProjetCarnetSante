@@ -3,6 +3,7 @@ import "./assuranceMaladie.css"
 import { useState } from 'react';
 import $ from "jquery";
 import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import assuranceMaladie from "../../../assets/img/Divers/CarteAssuranceMaladie.svg";
 import Inputmask from "inputmask";
 import Navigation from "../../../extensions/navigation/navigation.jsx";
 
@@ -39,6 +40,21 @@ function AssuranceMaladie() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
+            <div className="assuranceMaladie">
+                <h3>Carte d'assurance maladie</h3>
+                <p>Numéro d’assurance maladie
+                    (4 lettres et 8 chiffres)
+                </p>
+                <img src={assuranceMaladie} alt="assuranceMaladieCarte" />
+                <p>Date d’expiration</p>
+                <p className="red">Lorsque vous
+                    prenez
+                    un rendez-vous,
+                    on vous
+                    demandera
+                    ce numéro.
+                </p> 
+            </div>
         </div>
     </div>
   );
