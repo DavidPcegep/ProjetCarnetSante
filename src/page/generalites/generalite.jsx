@@ -52,18 +52,20 @@ $(document).ready(function(){
         if ($.inArray("Autre", $(this).val()) == -1) $("#autreCIM").hide();
     })
 
-    $("body").delegate(".spanGeneraliteAjouter", "click", function(){
+    $("body").delegate(".btnGeneraliteAjouter", "click", function(){
         var current = $(this).attr("data-current");
-        if ($(this).text() == "Ajouter" && $(".input-group[data-current='" + current + "'] > .inputGeneraliteAjouter").val().length != 0) {
+        if ($(this).text() == "Ajouter" && $(".inputAjouterContent > .inputGeneraliteAjouter").val().length != 0) {
             var next = parseInt(current) + 1;
-            $("#GeneraliteAjouterContent").append(' <div class="input-group" data-current="' + next + '">\n' +
-                '                   <input type="text" class="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperation1'+next+'" placeholder="Chirurgie ou Opération #' + next + '"/>\n' +
-                '<input type="date" class="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate'+next+'" placeholder="Date"/>'+
-                '                   <span class="input-group-text spanGeneraliteAjouter" data-current="' + next + '">Ajouter</span>\n' +
-                '                   </div>');
-            $(this).text("Supprimer");
+            $("#GeneraliteAjouterContent").append('<div class="inputGroupGeneraliteAjouter d-flex flex-row" data-current="1">\n' +
+                '                            <div class="inputAjouterContent">\n' +
+                '                                <input type="text" class="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #1"/>\n' +
+                '                                <input type="date" class="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #1"/>\n' +
+                '                            </div>\n' +
+                '                            <button type="button" class="btnGeneraliteAjouter" data-current="1">Ajouter</button>\n' +
+                '                        </div>');
+            $(this).text("Enlever");
         }
-        else if ($(this).text() == "Supprimer") {
+        else if ($(this).text() == "Enlever") {
             $(this).parent().remove();
             var next = parseInt(current) + 1;
             $.each($(".input-group"), function (index, value) {
@@ -71,12 +73,12 @@ $(document).ready(function(){
                 var newCurrent = parseInt(current) - 1;
                 if (current >= next){
                     $(this).attr("data-current", newCurrent);
-                    $(".spanGeneraliteAjouter[data-current='" + current + "']").attr("data-current", newCurrent);
+                    $(".btnGeneraliteAjouter[data-current='" + current + "']").attr("data-current", newCurrent);
                     $(".input-group[data-current='" + newCurrent + "'] > .inputGeneraliteAjouter").attr("placeholder", "Chirurgie ou Opération #" + newCurrent);
                 }
             });
         }
-        var count = $(".input-group").length;
+        var count = $(".inputAjouterContent").length;
         $("#labelGeneraliteAjouter").text("Chirurgies ou Opérations (" + count + ")");
     })
 
@@ -203,13 +205,13 @@ function Generalite() {
                     </div>
                     <label form="inputGeneraliteChirurgie" id="labelGeneraliteAjouter">Chirurgies ou Opérations (1)</label>
                     <div id="GeneraliteAjouterContent">
-                        <div className="input-group" data-current="1">
-                            <input type="text" className="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie ou Opération #1"/>
-                            <span className="input-group-text spanGeneraliteAjouter" data-current="1">Ajouter</span>
+                        <div className="inputGroupGeneraliteAjouter d-flex flex-row" data-current="1">
+                            <div className="inputAjouterContent">
+                                <input type="text" className="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #1"/>
+                                <input type="date" className="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #1"/>
+                            </div>
+                            <button type="button" className="btnGeneraliteAjouter" data-current="1">Ajouter</button>
                         </div>
-                    </div>
-                    <div className="d-flex justify-content-end mt-4">
-                        <button className="btn btn-lg btnGeneralite" data-toggle="modal" data-target="#modalGeneralite">Suivant</button>
                     </div>
                 </div>
             </form>

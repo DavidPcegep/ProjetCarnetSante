@@ -64,11 +64,22 @@ textarea{
     display: none;
 }
 
-.spanGeneraliteAjouter, .inputGeneraliteAjouter{
+.inputGeneraliteAjouter, .dateGeneraliteAjouter{
     height: 3em;
+    margin: 0 !important;
 }
-
+.btnGeneraliteAjouter{
+    background-color: #213547 !important;
+    color: white;
+    margin: 0 !important;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+}
 .spanGeneraliteAjouter:hover{
     background-color: #002d45;
     color: white;
+}
+.inputGroupGeneraliteAjouter{
+    width: 100%;
 }
