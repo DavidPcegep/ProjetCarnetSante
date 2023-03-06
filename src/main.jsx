@@ -17,7 +17,7 @@ import MedecinFamille from './page/boiteAOutil/medecinFamille/medecinFamille.jsx
 import TemperaturePression from './page/boiteAOutil/temperaturePression/temperaturePression.jsx';
 import { Navigate } from "react-router-dom";
 import {
-  createBrowserRouter,
+  createBrowserRouter, Navigate,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
@@ -26,7 +26,8 @@ import './index.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/login" />
+    element: <Navigate to="/login" />,
+
   },
   {
     path: "/login",

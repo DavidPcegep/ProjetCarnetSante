@@ -69,7 +69,7 @@ function Login() {
             </form>
             <div className="choixContent">ou</div>
             <div className="buttonContentLogin">
-              <a href="/loginCode" className="btn btn-primary">Se connecter via un code</a>
+              <a href="/loginCode" className="btnLogin">Se connecter via un code</a>
             </div>
           <hr></hr>
           <div className="inscription container">

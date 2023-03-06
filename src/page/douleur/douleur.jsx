@@ -15,6 +15,7 @@ function Douleur() {
     return (
         <div>
         <div className="Content">
+
             <a href="/login" className="position-absolute start-0 me-2 p-3 fs-1">
                 <i className="btn-exit bi bi-box-arrow-left"></i>
             </a>

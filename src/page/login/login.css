@@ -22,6 +22,13 @@
     top: 140vw;
 }
 
+.btnLogin{
+    background-color: #213547 !important;
+    margin: 0 !important;
+    color: white;
+    padding: 0.7em;
+    border-radius: 5px;
+}
 
 .backgroundContent img {
     width: 100%;
