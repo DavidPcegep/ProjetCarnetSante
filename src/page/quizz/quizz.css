@@ -1,0 +1,54 @@
+.p1 {
+    font-size: 1.6em;
+    text-align: center;
+    /* surligner le texte */
+    background-color: #fad4db;
+}
+
+.p2 {
+    font-size: 1.6em;
+    text-align: center;
+    /* surligner le texte */
+    background-color: #dbe57f;
+}
+
+.p3 {
+    font-size: 1.6em;
+    text-align: center;
+    /* surligner le texte */
+    background-color: #fec84d;
+}
+
+.p4 {
+    font-size: 1.6em;
+    text-align: center;
+    /* surligner le texte */
+    background-color: #97d6d8;
+}
+
+.p5 {
+    font-size: 1.6em;
+    text-align: center;
+    /* surligner le texte */
+    background-color: #dfe0e2;
+}
+
+.scroll-container {
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
+.scroll-container {
+    width: 100%;
+    height: 45%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+}

@@ -25,51 +25,58 @@ $(document).ready(function() {
 });
 function reactionStressHabitude(){
     return(
-    <div className="reactionStressHabitude">
-        <div class="scroll-container">
-            <div class="scroll-page" id="page-1">
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Activite} alt="Activite" className="Activite"/><br></br>Activite</button>
+    <div class="scroll-container">
+        <div className="d-flex justify-content-center">
+            <h1>Stress</h1>
+        </div>
+        <div className="reactionStressHabitude">
+            <div>
+                <div class="scroll-page" id="page-1">
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Activite} alt="Activite" className="Activite"/><br></br>Activite</button>
+                    </div>
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Consommation} alt="Consommation" className="Consommation"/><br></br>Consommation</button>
+                    </div>
                 </div>
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Consommation} alt="Consommation" className="Consommation"/><br></br>Consommation</button>
+                <div class="scroll-page" id="page-2">
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Marcher} alt="Marcher" className="Marcher"/><br></br>Marcher</button>
+                    </div>
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Menage} alt="Menage" className="Menage"/><br></br>Menage</button>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-page" id="page-2">
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Marcher} alt="Marcher" className="Marcher"/><br></br>Marcher</button>
+                <div class="scroll-page" id="page-3">
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Impatiente} alt="Impatiente" className="Impatiente"/><br></br>Impatiente</button>
+                    </div>
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Respire} alt="Respire" className="Respire"/><br></br>Respire</button>
+                    </div>
                 </div>
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Menage} alt="Menage" className="Menage"/><br></br>Menage</button>
+                <div class="scroll-page" id="page-4">
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={DouleurCorporelles} alt="DouleurCorporelles" className="DouleurCorporelles"/><br></br>Douleur Corporelles</button>
+                    </div>
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={ReseauxSociaux} alt="ReseauxSociaux" className="ReseauxSociaux"/><br></br>Reseaux Sociaux</button>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-page" id="page-3">
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Impatiente} alt="Impatiente" className="Impatiente"/><br></br>Impatiente</button>
+                <div class="scroll-page" id="page-5">
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Seule} alt="Seule" className="Seule"/><br></br>Seule</button>
+                    </div>
                 </div>
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Respire} alt="Respire" className="Respire"/><br></br>Respire</button>
-                </div>
-            </div>
-            <div class="scroll-page" id="page-4">
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Seule} alt="Seule" className="Seule"/><br></br>Seule</button>
-                </div>
-                <div className="stressHabitude">
-                    <button className="btn"><img src={ReseauxSociaux} alt="ReseauxSociaux" className="ReseauxSociaux"/><br></br>ReseauxSociaux</button>
-                </div>
-            </div>
-            <div class="scroll-page" id="page-5">
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={DouleurCorporelles} alt="DouleurCorporelles" className="DouleurCorporelles"/><br></br>DouleurCorporelles</button>
-                </div>
-                <div className="stressHabitude">
-                    <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
+                <div class="scroll-page" id="page-6">
+                    <div className="stressHabitude">
+                        <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div className="buttonContentLogin">
-            <button className="buttonLogin">S'inscrire</button>
+        <div className="d-flex justify-content-center mb-5">
+            <button className="btn-middle fixed-bottom">Suivant</button>
         </div>
     </div>
     );
