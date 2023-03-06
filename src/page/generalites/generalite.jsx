@@ -56,7 +56,7 @@ $(document).ready(function(){
         var current = $(this).attr("data-current");
         if ($(this).text() == "Ajouter" && $(".inputAjouterChirugieContent > .inputGeneraliteChirurgieAjouter").val().length != 0) {
             var next = parseInt(current) + 1;
-            $("#GeneraliteChirurgieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteChirurgieAjouter d-flex flex-row mt-2" data-current="'+next+'">\n' +
+            $("#GeneraliteChirurgieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteChirurgieAjouter d-flex flex-row mt-4" data-current="'+next+'">\n' +
                 '                            <div class="inputAjouterContent inputAjouterChirugieContent w-100">\n' +
                 '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteChirurgieAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #'+next+'"/>\n' +
                 '                                <input type="date" class="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #'+next+'"/>\n' +
@@ -86,7 +86,7 @@ $(document).ready(function(){
         var current = $(this).attr("data-current");
         if ($(this).text() == "Ajouter" && $(".inputAjouterAllergieContent > .inputGeneraliteAllergieAjouter").val().length != 0) {
             var next = parseInt(current) + 1;
-            $("#GeneraliteAllergieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteAllergieAjouter d-flex flex-row mt-2" data-current="'+next+'">\n' +
+            $("#GeneraliteAllergieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteAllergieAjouter d-flex flex-row mt-4" data-current="'+next+'">\n' +
                 '                            <div class="inputAjouterContent inputAjouterAllergieContent w-100">\n' +
                 '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteAllergieAjouter" name="inputGeneraliteAllergie1" placeholder="Allergie #'+next+'"/>\n' +
                 '                            </div>\n' +
@@ -107,6 +107,9 @@ $(document).ready(function(){
                 }
             });
         }
+        var count = $(".inputAjouterAllergieContent").length;
+        $("#labelGeneraliteAllergieAjouter").text("Allergies aux médicaments (" + count + ")");
+
 
     });
 
@@ -186,7 +189,15 @@ function Generalite() {
                             <button type="button" className="btnGeneraliteAjouter btnGeneraliteChirurgieAjouter" data-current="1">Ajouter</button>
                         </div>
                     </div>
-                    <label form="inputGeneraliteAllergie" className="mt-5" id="labelGeneraliteAjouter">Allergies (1)</label>
+                    <br></br>
+                    <label form="inputGeneralitePharmacie" id="labelGeneralitePharmacieAjouter">Pharmacie</label>
+                    <input type="text" className="form-control form-control-lg border-2" id="inputGeneralitePharmacie" name="inputGeneralitePharmacie" placeholder="Pharmacies"/>
+                    <label form="inputGeneraliteTelephonePharmacie" id="labelGeneraliteTelephonePharmacieAjouter">Téléphone de la pharmacie</label>
+                    <input type="text" className="form-control form-control-lg border-2" id="inputGeneralitePharmacieTelephone" name="inputGeneralitePharmacieTelephone" placeholder="Téléphone"/>
+                    <label form="inputGeneraliteAdressePhamarcie" id="labelGeneraliteAdressePhamarcieAjouter">Adresse de la pharmacie</label>
+                    <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteAdressePhamarcie" name="inputGeneraliteAdressePhamarcie" placeholder="Adresse de la pharmacie"/>
+
+                    <label form="inputGeneraliteAllergie" id="labelGeneraliteAjouter">Allergies aux médicaments (1)</label>
                     <div id="GeneraliteAllergieAjouterContent">
                         <div className="inputGroupGeneraliteAjouter inputGroupGeneraliteAllergieAjouter d-flex flex-row" data-current="1">
                                 <div className="inputAjouterContent inputAjouterAllergieContent w-100">
@@ -195,7 +206,6 @@ function Generalite() {
                             <button type="button" className="btnGeneraliteAjouter btnGeneraliteAllergieAjouter" data-current="1">Ajouter</button>
                         </div>
                     </div>
-
                 </div>
             </form>
         </div>
