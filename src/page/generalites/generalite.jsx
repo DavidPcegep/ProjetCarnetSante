@@ -52,35 +52,63 @@ $(document).ready(function(){
         if ($.inArray("Autre", $(this).val()) == -1) $("#autreCIM").hide();
     })
 
-    $("body").delegate(".btnGeneraliteAjouter", "click", function(){
+    $("body").delegate(".btnGeneraliteChirurgieAjouter", "click", function(){
         var current = $(this).attr("data-current");
-        if ($(this).text() == "Ajouter" && $(".inputAjouterContent > .inputGeneraliteAjouter").val().length != 0) {
+        if ($(this).text() == "Ajouter" && $(".inputAjouterChirugieContent > .inputGeneraliteChirurgieAjouter").val().length != 0) {
             var next = parseInt(current) + 1;
-            $("#GeneraliteAjouterContent").append('<div class="inputGroupGeneraliteAjouter d-flex flex-row" data-current="1">\n' +
-                '                            <div class="inputAjouterContent">\n' +
-                '                                <input type="text" class="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #1"/>\n' +
-                '                                <input type="date" class="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #1"/>\n' +
+            $("#GeneraliteChirurgieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteChirurgieAjouter d-flex flex-row mt-2" data-current="'+next+'">\n' +
+                '                            <div class="inputAjouterContent inputAjouterChirugieContent w-100">\n' +
+                '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteChirurgieAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #'+next+'"/>\n' +
+                '                                <input type="date" class="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #'+next+'"/>\n' +
                 '                            </div>\n' +
-                '                            <button type="button" class="btnGeneraliteAjouter" data-current="1">Ajouter</button>\n' +
+                '                            <button type="button" class="btnGeneraliteAjouter btnGeneraliteChirurgieAjouter" data-current="'+next+'">Ajouter</button>\n' +
                 '                        </div>');
             $(this).text("Enlever");
         }
         else if ($(this).text() == "Enlever") {
             $(this).parent().remove();
             var next = parseInt(current) + 1;
-            $.each($(".input-group"), function (index, value) {
+            $.each($(".inputGroupGeneraliteChirurgieAjouter"), function (index, value) {
                 var current = $(this).attr("data-current");
                 var newCurrent = parseInt(current) - 1;
                 if (current >= next){
                     $(this).attr("data-current", newCurrent);
-                    $(".btnGeneraliteAjouter[data-current='" + current + "']").attr("data-current", newCurrent);
-                    $(".input-group[data-current='" + newCurrent + "'] > .inputGeneraliteAjouter").attr("placeholder", "Chirurgie ou Opération #" + newCurrent);
+                    $(".btnGeneraliteChirurgieAjouter[data-current='" + current + "']").attr("data-current", newCurrent);
+                    $(".inputGroupGeneraliteChirurgieAjouter[data-current='" + newCurrent + "'] > .inputAjouterChirugieContent > .inputGeneraliteChirurgieAjouter").attr("placeholder", "Chirurgie/Opération #" + newCurrent);
                 }
             });
         }
-        var count = $(".inputAjouterContent").length;
-        $("#labelGeneraliteAjouter").text("Chirurgies ou Opérations (" + count + ")");
+        var count = $(".inputAjouterChirugieContent").length;
+        $("#labelGeneraliteChirurgieAjouter").text("Chirurgies ou Opérations (" + count + ")");
     })
+
+    $("body").delegate(".btnGeneraliteAllergieAjouter", "click", function(){
+        var current = $(this).attr("data-current");
+        if ($(this).text() == "Ajouter" && $(".inputAjouterAllergieContent > .inputGeneraliteAllergieAjouter").val().length != 0) {
+            var next = parseInt(current) + 1;
+            $("#GeneraliteAllergieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteAllergieAjouter d-flex flex-row mt-2" data-current="'+next+'">\n' +
+                '                            <div class="inputAjouterContent inputAjouterAllergieContent w-100">\n' +
+                '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteAllergieAjouter" name="inputGeneraliteAllergie1" placeholder="Allergie #'+next+'"/>\n' +
+                '                            </div>\n' +
+                '                            <button type="button" class="btnGeneraliteAjouter btnGeneraliteAllergieAjouter" data-current="'+next+'">Ajouter</button>\n' +
+                '                        </div>');
+            $(this).text("Enlever");
+        }
+        else if ($(this).text() == "Enlever") {
+            $(this).parent().remove();
+            var next = parseInt(current) + 1;
+            $.each($(".inputGroupGeneraliteAllergieAjouter"), function (index, value) {
+                var current = $(this).attr("data-current");
+                var newCurrent = parseInt(current) - 1;
+                if (current >= next){
+                    $(this).attr("data-current", newCurrent);
+                    $(".btnGeneraliteAllergieAjouter[data-current='" + current + "']").attr("data-current", newCurrent);
+                    $(".inputGroupGeneraliteAllergieAjouter[data-current='" + newCurrent + "'] > .inputAjouterAllergieContent > .inputGeneraliteAllergieAjouter").attr("placeholder", "Allergie #" + newCurrent);
+                }
+            });
+        }
+
+    });
 
 });
 
@@ -112,10 +140,6 @@ function Generalite() {
           <div className="container">
             <form>
                 <div className="form-control border-0">
-                    <label form="inputGeneraliteNomPrenom">Nom et prénom</label>
-                    <input type="text" className="form-control form-control-lg border-2" name="inputGeneraliteNomPrenom" placeholder="Nom" />
-                    <label form="inputGeneraliteTelephone">Téléphone</label>
-                    <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteTelephone" name="inputGeneraliteTelephone" placeholder="Téléphone" />
                     <label form="selectGeneraliteGS">Groupe Sanguin</label>
                     <select type="text" className="form-control form-control-lg border-2" id="selectGeneraliteGS" name="selectGeneraliteGS" placeholder="Téléphone">
                         <option value="A+">A+</option>
@@ -127,8 +151,6 @@ function Generalite() {
                         <option value="O+">O+</option>
                         <option value="O-">O-</option>
                     </select>
-                    <label form="inputGeneraliteContactUrgence">Contact d'urgence</label>
-                    <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteContactUrgence" name="inputGeneraliteContactUrgence" placeholder="Contact d'urgence"/>
                     <label form="selectGeneraliteMC">Maladies Chroniques</label>
                     <select className="form-select form-select-lg" multiple aria-label="multiple select example" name="selectGeneraliteMC" id="selectGeneraliteMC">
                         <option value="Diabète">Diabète</option>
@@ -143,17 +165,6 @@ function Generalite() {
                         <label form="inputGeneraliteMCAutre">Autre Maladie Chronique</label>
                         <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteMCAutre" name="inputGeneraliteMCAutre" placeholder="Autre Maladie Chronique"/>
                     </div>
-                    <label form="inputGeneraliteAllergie">Antécédents familiaux</label>
-                    <select className="form-select form-select-lg" multiple aria-label="multiple select example" name="selectGeneraliteAF" id="selectGeneraliteAF">
-                        <option value="Maladie du coeur">Maladie du coeur</option>
-                        <option value="Cancer">Cancer</option>
-                        <option value="Cholestérol">Cholestérol</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    <div id="autreAntecedentsFamiliaux">
-                        <label form="inputGeneraliteMCAutre">Autre Antécédents familiaux</label>
-                        <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteAFAutre" name="inputGeneraliteAFAutre" placeholder="Autre Antécédents familiaux"/>
-                    </div>
                     <label form="inputGeneraliteAllergie">Allergies</label>
                     <select className="form-select form-select-lg" multiple aria-label="multiple select example" name="selectGeneraliteAllergie" id="selectGeneraliteAllergie">
                         <option value="Noix">Noix</option>
@@ -165,54 +176,26 @@ function Generalite() {
                         <option value="Iode">Iode</option>
                         <option value="Autre">Autre</option>
                     </select>
-                    <div id="fruitsLegumesAllergie">
-                        <label form="inputGeneraliteAllergieFruitsLegumes">Fruits et légumes</label>
-                        <textarea className="form-control form-control-lg border-2" id="inputGeneraliteAllergieFruitsLegumes" name="inputGeneraliteAllergieFruitsLegumes" placeholder="Fruits et légumes"></textarea>
-                    </div>
-                    <div id="medicamentAllergie" className="mt-4">
-                        <label form="inputGeneraliteAllergieMedicament">Médicament</label>
-                        <textarea className="form-control form-control-lg border-2" id="inputGeneraliteAllergieMedicament" name="inputGeneraliteAllergieMedicament" placeholder="Médicament"></textarea>
-                    </div>
-                    <div id="autreAllergie" className="mt-4">
-                        <label form="inputGeneraliteAllergieAutre">Autre Allergie</label>
-                        <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteAllergieAutre" name="inputGeneraliteAllergieAutre" placeholder="Autre Allergie"/>
-                    </div>
-                    <label form="inputGeneraliteAllergie">Intolérances alimentaires</label>
-                    <select className="form-select form-select-lg" multiple aria-label="multiple select example" name="selectGeneraliteIA" id="selectGeneraliteIA">
-                        <option value="Fruits ou légumes">Fruits ou légumes</option>
-                        <option value="Produits laitiers">Produits laitiers</option>
-                        <option value="Viande">Viande</option>
-                        <option value="Gluten">Gluten</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    <div id="fruitsLegumesIA" className="mt-4">
-                        <label form="inputGeneraliteIAFruitsLegumes">Fruits et légumes</label>
-                        <textarea className="form-control form-control-lg border-2" id="inputGeneraliteIAFruitsLegumes" name="inputGeneraliteIAFruitsLegumes" placeholder="Fruits et légumes"></textarea>
-                    </div>
-                    <div id="autreIA" className="mt-4">
-                        <label form="inputGeneraliteIAAutre">Autre Intolérance alimentaire</label>
-                        <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteIAAutre" name="inputGeneraliteIAAutre" placeholder="Autre Intolérance alimentaire"/>
-                    </div>
-                    <label form="inputGeneraliteCIM">Contre-indications médicales</label>
-                    <select className="form-select form-select-lg" multiple aria-label="multiple select example" name="selectGeneraliteCIM" id="selectGeneraliteCIM">
-                        <option value="IRM">IRM</option>
-                        <option value="Transfusions">Transfusions</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    <div id="autreCIM" className="mt-4">
-                        <label form="inputGeneraliteCIMAutre">Autre Contre-indications médicales</label>
-                        <input type="text" className="form-control form-control-lg border-2" id="inputGeneraliteCIMAutre" name="inputGeneraliteCIMAutre" placeholder="Autre Contre-indications médicales"/>
-                    </div>
-                    <label form="inputGeneraliteChirurgie" id="labelGeneraliteAjouter">Chirurgies ou Opérations (1)</label>
-                    <div id="GeneraliteAjouterContent">
-                        <div className="inputGroupGeneraliteAjouter d-flex flex-row" data-current="1">
-                            <div className="inputAjouterContent">
-                                <input type="text" className="form-control inputGeneraliteAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #1"/>
-                                <input type="date" className="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #1"/>
-                            </div>
-                            <button type="button" className="btnGeneraliteAjouter" data-current="1">Ajouter</button>
+                    <label form="inputGeneraliteChirurgie" id="labelGeneraliteChirurgieAjouter">Chirurgies ou Opérations (1)</label>
+                    <div id="GeneraliteChirurgieAjouterContent">
+                        <div className="inputGroupGeneraliteAjouter inputGroupGeneraliteChirurgieAjouter d-flex flex-row" data-current="1">
+                                <div className="inputAjouterContent inputAjouterChirugieContent w-100">
+                                    <input type="text" className="form-control inputGeneraliteAjouter inputGeneraliteChirurgieAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #1"/>
+                                    <input type="date" className="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #1"/>
+                                </div>
+                            <button type="button" className="btnGeneraliteAjouter btnGeneraliteChirurgieAjouter" data-current="1">Ajouter</button>
                         </div>
                     </div>
+                    <label form="inputGeneraliteAllergie" className="mt-5" id="labelGeneraliteAjouter">Allergies (1)</label>
+                    <div id="GeneraliteAllergieAjouterContent">
+                        <div className="inputGroupGeneraliteAjouter inputGroupGeneraliteAllergieAjouter d-flex flex-row" data-current="1">
+                                <div className="inputAjouterContent inputAjouterAllergieContent w-100">
+                                    <input type="text" className="form-control inputGeneraliteAjouter inputGeneraliteAllergieAjouter" name="inputGeneraliteAllergie1" placeholder="Allergie #1"/>
+                                </div>
+                            <button type="button" className="btnGeneraliteAjouter btnGeneraliteAllergieAjouter" data-current="1">Ajouter</button>
+                        </div>
+                    </div>
+
                 </div>
             </form>
         </div>
