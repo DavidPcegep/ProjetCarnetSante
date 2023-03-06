@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./douleur.css";
-import jauge from "../../extensions/jauge/jauge.jsx";
-import jauge2 from "../../extensions/jauge/jauge2.jsx";
+import jaugeDouleur from "../../extensions/jauge/jaugeDouleur.jsx";
+import jaugeSommeil from "../../extensions/jauge/jaugeSommeil.jsx";
 import calendrier from "../../extensions/calendrier/calendrier.jsx";
 import sentiment from "../../extensions/sentiment/sentiment.jsx";
 import sentiment2 from "../../extensions/sentiment/sentiment2.jsx";
@@ -23,7 +23,7 @@ function Douleur() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
-            {sentiment2()}
+            {reactionStressHabitude()}
         </div>
         </div>
     );

@@ -1,15 +1,18 @@
 .douleurHabitude img {
-    width: 60%;
+    min-width: 1em;
+    max-width: 5em;
 }
 
 .douleurHabitude {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 40%;
 }
 
-.btn {
-    border-width: 1em;
+.btn-middle {
+    color: blue;
+    background-color: #72d9d7 !important;
 }
 
 .scroll-container {
@@ -19,9 +22,9 @@
 }
 
 .scroll-container {
-    width: 100%;
-    height: 60%;
-    overflow-y: scroll;
+    width: 100% ;
+    height: 100% !important;
+    overflow-y: auto;
     scroll-behavior: smooth;
 }
 
@@ -30,4 +33,13 @@
     align-items: center;
     justify-content: center;
     font-size: 5em;
+}
+
+.mt-2 {
+    margin-top: 5% !important;
+    align-items: center !important;
+}
+
+.mb-5 {
+    margin-bottom: 8em;
 }

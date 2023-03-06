@@ -25,54 +25,60 @@ $(document).ready(function() {
 });
 function reactionEnergieHabitude(){
     return(
-    <div className="reactionEnergieHabitude">
         <div class="scroll-container">
-            <div class="scroll-page" id="page-1">
-                <div className="energieHabitude">
-                    <button className="btn"><img src={Dormir} alt="Dors" className="Dors"/><br></br>Dors</button>
-                </div>
-                <div className="energieHabitude">
-                    <button className="btn"><img src={Detendre} alt="Detendre" className="Detendre"/><br></br>Detendre</button>
+            <div className="d-flex justify-content-center">
+                <h1>Energie</h1>
+            </div>
+            <div className="reactionEnergieHabitude">
+                <div>
+                    <div class="scroll-page" id="page-1">
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={Dormir} alt="Dors" className="Dors"/><br></br>Dormir</button>
+                        </div>
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={Detendre} alt="Detendre" className="Detendre"/><br></br>Detendre</button>
+                        </div>
+                    </div>
+                    <div class="scroll-page" id="page-2">
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={Stimulants} alt="Stimulants" className="Stimulants"/><br></br>Stimulants</button>
+                        </div>
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={Alcool} alt="Alcool" className="Alcool"/><br></br>Alcool</button>
+                        </div>
+                    </div>
+                    <div class="scroll-page" id="page-3">
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={ProduitsNaturels} alt="Routine" className="Routine"/><br></br>Routine</button>
+                        </div>
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={PasQuoiFaire} alt="PasQuoiFaire" className="PasQuoiFaire"/><br></br>Pas Quoi Faire</button>
+                        </div>
+                    </div>
+                    <div class="scroll-page" id="page-4">
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={Television} alt="Television" className="Television"/><br></br>Television</button>
+                        </div>
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={ResauxSociaux} alt="ResauxSociaux" className="ResauxSociaux"/><br></br>Resaux Sociaux</button>
+                        </div>
+                    </div>
+                    <div class="scroll-page" id="page-5">
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={DemanderAide} alt="DemanderAide" className="DemanderAide"/><br></br>Demander de l'aide</button>
+                        </div>
+                    </div>
+                    <div class="scroll-page" id="page-6">
+                        <div className="energieHabitude">
+                            <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="scroll-page" id="page-2">
-                <div className="energieHabitude">
-                    <button className="btn"><img src={Stimulants} alt="Stimulants" className="Stimulants"/><br></br>Stimulants</button>
-                </div>
-                <div className="energieHabitude">
-                    <button className="btn"><img src={Alcool} alt="Alcool" className="Alcool"/><br></br>Alcool</button>
-                </div>
+            <div className="d-flex justify-content-center mb-5">
+                <button className="btn-middle fixed-bottom">Suivant</button>
             </div>
-            <div class="scroll-page" id="page-3">
-                <div className="energieHabitude">
-                    <button className="btn"><img src={ProduitsNaturels} alt="Routine" className="Routine"/><br></br>Routine</button>
-                </div>
-                <div className="energieHabitude">
-                    <button className="btn"><img src={DemanderAide} alt="DemanderAide" className="DemanderAide"/><br></br>DemanderAide</button>
-                </div>
-            </div>
-            <div class="scroll-page" id="page-4">
-                <div className="energieHabitude">
-                    <button className="btn"><img src={Television} alt="Television" className="Television"/><br></br>Television</button>
-                </div>
-                <div className="energieHabitude">
-                    <button className="btn"><img src={ResauxSociaux} alt="ResauxSociaux" className="ResauxSociaux"/><br></br>ResauxSociaux</button>
-                </div>
-            </div>
-            <div class="scroll-page" id="page-5">
-                <div className="energieHabitude">
-                    <button className="btn"><img src={PasQuoiFaire} alt="PasQuoiFaire" className="PasQuoiFaire"/><br></br>PasQuoiFaire</button>
-                </div>
-                <div className="energieHabitude">
-                    <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
-                </div>
-            </div>
-            
         </div>
-        <div className="buttonContentLogin">
-            <button className="buttonLogin">S'inscrire</button>
-        </div>
-    </div>
     );
 }
 

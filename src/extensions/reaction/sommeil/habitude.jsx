@@ -23,43 +23,50 @@ $(document).ready(function() {
 });
 function reactionSommeilHabitude(){
     return(
-    <div className="reactionSommeilHabitude">
-        <div class="scroll-container">
-            <div class="scroll-page" id="page-1">
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Jour} alt="Jour" className="Jour"/><br></br>Jour</button>
+    <div class="scroll-container">
+        <div className="d-flex justify-content-center">
+            <h1>Sommeil</h1>
+        </div>
+        <div className="reactionSommeilHabitude">
+            <div>
+                <div class="scroll-page" id="page-1">
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Jour} alt="Jour" className="Jour"/><br></br>Jour</button>
+                    </div>
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Nuit} alt="Nuit" className="Nuit"/><br></br>Nuit</button>
+                    </div>
                 </div>
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Nuit} alt="Nuit" className="Nuit"/><br></br>Nuit</button>
+                <div class="scroll-page" id="page-2">
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={EmojiReveilSouvent} alt="EmojiReveilSouvent" className="EmojiReveilSouvent"/><br></br>Réveil souvent</button>
+                    </div>
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Mouton} alt="Mouton" className="Mouton"/><br></br>Mouton</button>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-page" id="page-2">
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={EmojiReveilSouvent} alt="EmojiReveilSouvent" className="EmojiReveilSouvent"/><br></br>EmojiReveilSouvent</button>
+                <div class="scroll-page" id="page-3">
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Routine} alt="Routine" className="Routine"/><br></br>Routine</button>
+                    </div>
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Medicament} alt="Medicament" className="Medicament"/><br></br>Medicament</button>
+                    </div>
                 </div>
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Mouton} alt="Mouton" className="Mouton"/><br></br>Mouton</button>
+                <div class="scroll-page" id="page-4">
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Variable} alt="Variable" className="Variable"/><br></br>Variable</button>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-page" id="page-3">
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Routine} alt="Routine" className="Routine"/><br></br>Routine</button>
-                </div>
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Medicament} alt="Medicament" className="Medicament"/><br></br>Medicament</button>
-                </div>
-            </div>
-            <div class="scroll-page" id="page-4">
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Variable} alt="Variable" className="Variable"/><br></br>Variable</button>
-                </div>
-                <div className="sommeilHabitude">
-                    <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
+                <div class="scroll-page" id="page-5">
+                    <div className="sommeilHabitude">
+                        <button className="btn"><img src={Autres} alt="Autres" className="Autres"/><br></br>Autres</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div className="buttonContentLogin">
-            <button className="buttonLogin">S'inscrire</button>
+        <div className="d-flex justify-content-center mb-5">
+            <button className="btn-middle fixed-bottom">Suivant</button>
         </div>
     </div>
     );

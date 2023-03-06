@@ -1,6 +1,6 @@
-import jaugeimg from "../../assets/img/Emotion/JaugeDouleur.png";
+import jaugeimg from "../../assets/img/Sommeil/JaugeSommeil.png";
 import $ from "jquery";
-import "./jauge.css"
+import "./jaugeSommeil.css"
 import * as React from "react";
 $(document).ready(function() {
     $("#jauge").on("input", function() {
@@ -11,19 +11,19 @@ $(document).ready(function() {
         slider.css("background", "rgba(" + 255 + "," + 0 + "," + 0 + "," + $(this).val()/100 + ")")
     });
 });
-function jauge(){
+function jaugeSommeil(){
     return(
-    <div className="jaugeContent">
-        <div className="jauge">
-            <img src={jaugeimg} alt="jauge"/>
-            <div className="cluster">
-                <div className="clusterLine"></div>
+        <div className="jaugeContent">
+            <div className="jauge">
+                <img src={jaugeimg} alt="jauge"/>
+                <div className="cluster">
+                    <div className="clusterLine"></div>
+                </div>
+                <div id="clusterValue"></div>
+                <input type="range" id="jauge" className="slider"/>
             </div>
-            <div id="clusterValue"></div>
-            <input type="range" id="jauge" className="slider"/>
         </div>
-    </div>
     );
 }
 
-export default jauge;
+export default jaugeSommeil;
