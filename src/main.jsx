@@ -21,7 +21,7 @@ import MatiereDangereuse from './page/boiteAOutil/matiereDangereuse/matiereDange
 import MedecinFamille from './page/boiteAOutil/medecinFamille/medecinFamille.jsx';
 import TemperaturePression from './page/boiteAOutil/temperaturePression/temperaturePression.jsx';
 
-import Ressource from './page/ressource/ressource.jsx';
+// import Ressource from './page/ressource/ressource.jsx';
 
 import Template from './template';
 
@@ -88,10 +88,10 @@ const router = createBrowserRouter([
     path: "/boiteAOutil/temperaturePression",
     element: <TemperaturePression />,
   },
-  {
-    path: "/ressource",
-    element: <Ressource />,
-  },
+  // {
+  //   path: "/ressource",
+  //   element: <Ressource />,
+  // },
   {
     path: "/template",
     element: <Template />,

@@ -73,10 +73,10 @@ function Inscription() {
                 <h1 className="textLogin">Inscris-toi</h1>
               </div>
               <label form="inputInscriptionNom" id="labelInscriptionNom">Nom</label>
-              <input type="text" className="form-control form-control-lg border-2" id="inputInscriptionNom" name="inputInscriptionNom" placeholder="Félix"/>
-              <label form="inputInscriptionNom" id="labelInscriptionNom">Prénom</label>
-              <input type="text" className="form-control form-control-lg border-2" id="inputInscriptionNom" name="inputInscriptionNom" placeholder="Félix"/>
-              <label form="inputInscriptionNom" id="labelInscriptionNom">Courriel</label>
+              <input type="text" className="form-control form-control-lg border-2" id="inputInscriptionNom" name="inputInscriptionNom" placeholder="Felix"/>
+              <label form="inputInscriptionPrenom" id="labelInscriptionNom">Prénom</label>
+              <input type="text" className="form-control form-control-lg border-2" id="inputInscriptionPrenom" name="inputInscriptionPrenom" placeholder="Kjellberg"/>
+              <label form="inputInscriptionCourriel" id="labelInscriptionNom">Courriel</label>
               <input type="text" className="form-control form-control-lg border-2" id="inputInscriptionNom" name="inputInscriptionNom" placeholder="Félix"/>
               <label form="inputInscriptionNom" id="labelInscriptionNom">dateDeNaissance</label>
               <input type="text" className="form-control form-control-lg border-2" id="inputInscriptionNom" name="inputInscriptionNom" placeholder="Félix"/>
