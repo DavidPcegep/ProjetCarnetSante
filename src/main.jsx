@@ -1,90 +1,101 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import Login from './page/login/login.jsx';
+
 import Accueil from './page/accueil/accueil.jsx';
-import LoginCode from './page/login/loginCode.jsx';
-import Template from './template';
-import Generalite from './page/generalites/generalite.jsx';
-import Douleur from './page/douleur/douleur.jsx';
-import Quizz from './page/quizz/quizz.jsx';
-import Prescription from './page/prescription/prescription.jsx';
-import Ressource from './page/ressource/ressource.jsx';
+
+import Login from './page/connexion/login/login.jsx';
+import LoginCode from './page/connexion/loginCode/loginCode.jsx';
+import Inscription from './page/connexion/inscription/inscription.jsx';
+
+
+import Generalite from './page/informationPersonnelle/generalites/generalite.jsx';
+import Prescription from './page/informationPersonnelle/prescription/prescription.jsx';
+
+import Douleur from './page/rendezVous/autoEvaluation/douleur/douleur.jsx';
+import Quizz from './page/rendezVous/autoEvaluation/quizz/quizz.jsx';
+
 import AssuranceMaladie from './page/boiteAOutil/assuranceMaladie/assuranceMaladie.jsx';
 import CarteHopital from './page/boiteAOutil/carteHopital/carteHopital.jsx';
 import MatiereDangereuse from './page/boiteAOutil/matiereDangereuse/matiereDangereuse.jsx';
 import MedecinFamille from './page/boiteAOutil/medecinFamille/medecinFamille.jsx';
 import TemperaturePression from './page/boiteAOutil/temperaturePression/temperaturePression.jsx';
-import { Navigate } from "react-router-dom";
+
+import Ressource from './page/ressource/ressource.jsx';
+
+import Template from './template';
+
 import {
   createBrowserRouter, Navigate,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
-
+import './index.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/login" />,
-
+    element: <Navigate to="/connexion/login" />,
   },
   {
-    path: "/login",
+    path: "/connexion/login",
     element: <Login />,
   },
   {
-    path: "/loginCode",
+    path: "/connexion/loginCode",
     element: <LoginCode/>,
+  },
+  {
+    path: "/connexion/inscription",
+    element: <Inscription />,
   },
   {
     path: "/accueil",
     element: <Accueil />,
   },
   {
-    path: "/generalite",
+    path: "/informationPersonnelle/generalite",
     element: <Generalite />,
   },
   {
-    path: "/template",
-    element: <Template />,
-  },
-  {
-    path: "/douleur",
+    path: "/rendezVous/AutoEvaluation/douleur",
     element: <Douleur />,
   },
   {
-    path: "/quizz",
+    path: "/rendezVous/AutoEvaluation/quizz",
     element: <Quizz />,
   },
   {
-    path: "/prescription",
+    path: "/informationPersonnelle/prescription",
     element: <Prescription />,
+  },
+  {
+    path: "/boiteAOutil/assuranceMaladie",
+    element: <AssuranceMaladie />,
+  },
+  {
+    path: "/boiteAOutil/carteHopital",
+    element: <CarteHopital />,
+  },
+  {
+    path: "/boiteAOutil/matiereDangereuse",
+    element: <MatiereDangereuse />,
+  },
+  {
+    path: "/boiteAOutil/medecinFamille",
+    element: <MedecinFamille />,
+  },
+  {
+    path: "/boiteAOutil/temperaturePression",
+    element: <TemperaturePression />,
   },
   {
     path: "/ressource",
     element: <Ressource />,
   },
   {
-    path: "/assuranceMaladie",
-    element: <AssuranceMaladie />,
+    path: "/template",
+    element: <Template />,
   },
-  {
-    path: "/carteHopital",
-    element: <CarteHopital />,
-  },
-  {
-    path: "/matiereDangereuse",
-    element: <MatiereDangereuse />,
-  },
-  {
-    path: "/medecinFamille",
-    element: <MedecinFamille />,
-  },
-  {
-    path: "/temperaturePression",
-    element: <TemperaturePression />,
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -2,9 +2,9 @@ import * as React from "react";
 import "./prescription.css"
 import { useState } from 'react';
 import $ from "jquery";
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import Inputmask from "inputmask";
-import Navigation from "../../extensions/navigation/navigation.jsx";
+import Navigation from "../../../extensions/navigation/navigation.jsx";
 
 
 
