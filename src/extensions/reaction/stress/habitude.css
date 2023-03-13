@@ -1,15 +1,13 @@
 .stressHabitude img {
-    width: 50%;
+    min-width: 1em;
+    max-width: 5em;
 }
 
 .stressHabitude {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.btn {
-    border-width: 1em;
+    min-width: 40%;
 }
 
 .scroll-container {
@@ -30,4 +28,8 @@
     align-items: center;
     justify-content: center;
     font-size: 5em;
+}
+
+.mb-5 {
+    margin-bottom: 8em;
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./login.css"
-import backgroundLogin from '../../assets/img/Logo/logoBackground.png';
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import backgroundLogin from '../../../assets/img/Logo/logoBackground.png';
+import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import { useState } from 'react';
 import { redirect } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -69,7 +69,7 @@ function Login() {
             </form>
             <div className="choixContent">ou</div>
             <div className="buttonContentLogin">
-              <a href="/loginCode" className="btn btn-primary">Se connecter via un code</a>
+              <a href="/loginCode" className="btnLogin">Se connecter via un code</a>
             </div>
           <hr></hr>
           <div className="inscription container">

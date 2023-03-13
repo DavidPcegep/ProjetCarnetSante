@@ -1,0 +1,22 @@
+.sentiment img {
+    width: 60%;
+}
+
+/* .calendrier :active img {
+    filter:invert(90%);
+} */
+
+.sentiment {
+    border: 0;
+}
+
+#openPopup:focus {
+    outline: none;
+}
+
+.sentimentContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 40%;
+}

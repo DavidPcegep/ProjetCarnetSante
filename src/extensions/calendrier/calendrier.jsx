@@ -6,16 +6,6 @@ import "./calendrier.css"
 import * as React from "react";
 $(document).ready(function() {
     $(".calendrierParfois").click(function() {
-        $(".calendrierParfois").css("filter", "invert(90%)");
-        $(".calendrierSouvent, .calendrierToujours").css("filter", "invert(0%)");
-    });
-    $(".calendrierSouvent").click(function() {
-        $(".calendrierParfois, .calendrierToujours").css("filter", "invert(0%)");
-        $(".calendrierSouvent").css("filter", "invert(90%)");
-    });
-    $(".calendrierToujours").click(function() {
-        $(".calendrierSouven, .calendrierParfois").css("filter", "invert(0%)");
-        $(".calendrierToujours").css("filter", "invert(90%)");
         if($(".calendrierParfois").css("filter") == "invert(0.9)")
         {
             $(".calendrierParfois").css("filter", "invert(0%)");
