@@ -3,6 +3,10 @@ import "./matiereDangereuse.css"
 import { useState } from 'react';
 import $ from "jquery";
 import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import Toxique from "../../../assets/img/Pictogramme/Toxique.svg";
+import Corrosif from "../../../assets/img/Pictogramme/Corrosif.svg";
+import Inflammable from "../../../assets/img/Pictogramme/Inflammable.svg";
+import Explosif from "../../../assets/img/Pictogramme/Explosif.svg";
 import Inputmask from "inputmask";
 import Navigation from "../../../extensions/navigation/navigation.jsx";
 
@@ -43,6 +47,29 @@ function MatiereDangereuse() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
+            <div className="toxique">
+                <h3>Très toxique</h3>
+                <img src={Toxique} alt="toxique" />
+                <p className="red">Poison</p>
+            </div>
+            <hr></hr>
+            <div className="corrosif">
+                <h3>Corrosif</h3>
+                <img src={Corrosif} alt="corrosif" />
+                <p className="red">Protéger la peau et les yeux</p>
+            </div>
+            <hr></hr>
+            <div className="inflammable">
+                <h3>Facilement  inflammable</h3>
+                <img src={Inflammable} alt="inflammable" />
+                <p className="red">Attention au feu</p>
+            </div>
+            <hr></hr>
+            <div className="explosif">
+                <h3>Explosif</h3>
+                <img src={Explosif} alt="explosif" />
+                <p className="red">Peut exploser</p>
+            </div>
         </div>
     </div>
   );

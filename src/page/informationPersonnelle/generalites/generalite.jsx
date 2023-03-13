@@ -1,11 +1,10 @@
 import * as React from "react";
-import jauge from "../../extensions/jauge/jauge.jsx";
 import "./generalite.css"
 import { useState } from 'react';
 import $ from "jquery";
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import Inputmask from "inputmask";
-import Navigation from "../../extensions/navigation/navigation.jsx";
+import Navigation from "../../../extensions/navigation/navigation.jsx";
 
 $(document).ready(function(){
     var inputDouleurTelephone = $("#inputDouleurTelephone");

@@ -43,6 +43,17 @@ function MedecinFamille() {
                 <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
             </div>
             <hr></hr>
+            <div className="medecinFamille">
+                <h3>Médecin de famille</h3>
+                <div className="medecinFamilleContent"> 
+                    <p>Pour vous inscrire sur la liste d'attente</p>
+                    <p>Allez sur le site internet</p>
+                    <p className="important">gamf.gouv.qc.ca</p>
+                    <p>ou appelez le </p>
+                    <p className="important">418 856-7000</p>
+                    <p>et composer le <a className="important" >5</a></p>
+                </div>
+            </div>
         </div>
     </div>
   );

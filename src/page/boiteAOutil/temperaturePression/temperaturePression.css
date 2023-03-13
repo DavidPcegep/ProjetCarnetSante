@@ -74,3 +74,15 @@ p {
 h3 {
     text-align: center
 }
+
+.temperatureContent{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.pressionContent{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
