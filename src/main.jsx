@@ -7,6 +7,8 @@ import LoginCode from './page/login/loginCode.jsx';
 import Template from './template';
 import Ressource from './page/ressource/ressource.jsx';
 import Specialiste from './page/ressource/specialiste.jsx';
+import ModifierInfrastructure from './page/ressource/modifierInfrastructure';
+import ModifierAccompagnant from './page/ressource/modifierAccompagnant';
 import Accompagnant from './page/ressource/accompagnant';
 import Infrastructure from './page/ressource/infrastructure';
 import NumeroUrgence from './page/ressource/numeroUrgence';
@@ -63,6 +65,14 @@ const router = createBrowserRouter([
   {
     path: "/ressource/infrastructure",
     element: <Infrastructure />,
+  },
+  {
+    path: "/ressource/infrastructure/modifier",
+    element: <ModifierInfrastructure />,
+  },
+  {
+    path: "/ressource/accompagnant/modifier",
+    element: <ModifierAccompagnant />,
   },
   {
     path: "/ressource/numeroUrgence",

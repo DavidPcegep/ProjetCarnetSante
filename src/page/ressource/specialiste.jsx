@@ -4,10 +4,30 @@ import "./specialiste.css"
 import $ from "jquery";
 import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
 import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import Navigation from "../../extensions/navigation/navigation.jsx";
 
-
+function CardSpecialiste(props){
+  return (
+    <Card className="mb-2 cardInfrastructure" border="primary">
+      <Card.Body>
+        <Card.Title> {props.name} </Card.Title>
+        <Card.Text>
+          <b> {props.specialite} </b>
+        </Card.Text>
+        <Card.Text>
+          <b>Telephone :</b> {props.telephone} 
+        </Card.Text>
+        <div class="position-absolute bottom-0 end-0 modifierIcon">
+          <Button variant="outline-danger" style={{border: '5px'}}>
+            <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
+          </Button>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
 function Specialiste() {
   const [scrollTop, setScrollTop] = useState(0);
   const handleScroll = (event) => {
@@ -35,70 +55,14 @@ function Specialiste() {
               <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
           </div>
           <hr></hr>
-          <h3> Accompagnant</h3><br/>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> Jeanne Oscour </Card.Title>
-              <Card.Text>
-                <b>Medecin Generaliste</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> Mark Steven </Card.Title>
-              <Card.Text>
-                <b>Infirmier</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> Enzo Richard </Card.Title>
-              <Card.Text>
-                <b>Genecologe</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> David Pigeon </Card.Title>
-              <Card.Text>
-                <b>B I G</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure bg-primary" border="primary" background="primary">
-          <Card.Body>
-          <div style={{display: 'flex', justifyContent: 'center'}}>
-                <Icon.Plus style={{fontSize:'30px', color:'white'}}></Icon.Plus>
-          </div>
-            </Card.Body>
-          </Card>
+          <h3> Specialiste</h3><br/>
+          <CardSpecialiste name="Jeanne Oscour" specialite="Medecin Generaliste" telephone="145-451-8958"/>
+          <CardSpecialiste name="Mark Steven" specialite="Infirmier" telephone="145-451-8958"/>
+          <CardSpecialiste name="Enzo Richard" specialite="Genecologe" telephone="145-451-8958"/>
+          <CardSpecialiste name="David Pigeon" specialite="B I G" telephone="145-451-8958"/>
+          <Button className="cardInfrastructure bg-primary">
+            <Icon.Plus style={{fontSize:'30px', color:'white'}}></Icon.Plus>
+          </Button>
           </div>
     </div>
   );

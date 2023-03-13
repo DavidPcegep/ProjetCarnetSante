@@ -3,11 +3,33 @@ import * as Icon from 'react-bootstrap-icons';
 import "./accompagnant.css"
 import { useState } from 'react';
 import $ from "jquery";
+import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card';
 import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import Navigation from "../../extensions/navigation/navigation.jsx";
 
-
+function CardAccompagnant(props){
+  return (
+    <Card className="mb-2 cardInfrastructure" border="primary">
+      <Card.Body>
+        <Card.Title> {props.name} </Card.Title>
+        <Card.Text>
+          <b> {props.type} </b>
+        </Card.Text>
+        <Card.Text>
+          <b>Telephone :</b> {props.telephone} 
+        </Card.Text>
+        <div class="position-absolute bottom-0 end-0 modifierIcon">
+          <a href="/ressource/accompagnant/modifier">
+            <Button variant="outline-danger" style={{border: '5px'}}>
+              <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
+            </Button>
+          </a>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
 function Accompagnant() {
   const [scrollTop, setScrollTop] = useState(0);
     const handleScroll = (event) => {
@@ -35,70 +57,14 @@ function Accompagnant() {
           </div>
           <hr></hr>
           <h3> Accompagnant</h3><br/>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> Jeanne Oscour </Card.Title>
-              <Card.Text>
-                <b>Suivie Dossier</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> Mark Steven </Card.Title>
-              <Card.Text>
-                <b>Accompagnant Rendez-vous</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> Enzo Richard </Card.Title>
-              <Card.Text>
-                <b>Programmer FrontEnd</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure" border="primary">
-            <Card.Body>
-              <Card.Title> David Chalon </Card.Title>
-              <Card.Text>
-                <b>Qui?</b>
-              </Card.Text>
-              <Card.Text>
-                <b>Telephone :</b>  145-451-8958
-              </Card.Text>
-              <div class="position-absolute bottom-0 end-0 modifierIcon">
-                <Icon.PencilFill style={{fontSize:'25px', color:'red'}}></Icon.PencilFill>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 cardInfrastructure bg-primary" border="primary" background="primary">
-          <Card.Body>
-          <div style={{display: 'flex', justifyContent: 'center'}}>
-                <Icon.Plus style={{fontSize:'30px', color:'white'}}></Icon.Plus>
-          </div>
-            </Card.Body>
-          </Card>
-          </div>
+          <CardAccompagnant name="Jeanne Oscour" type="Suivie Dossier" telephone="145-451-8958"/>
+          <CardAccompagnant name="Mark Steven" type="Accompagnant Rendez-vous" telephone="145-451-8958"/>
+          <CardAccompagnant name="Enzo Richard" type="Programmer FrontEnd" telephone="145-451-8958"/>
+          <CardAccompagnant name="David Chalon" type="Qui?" telephone="145-451-8958"/>
+          <Button className="cardInfrastructure bg-primary">
+            <Icon.Plus style={{fontSize:'30px', color:'white'}}></Icon.Plus>
+          </Button>
+        </div>
     </div>
   );
 }
