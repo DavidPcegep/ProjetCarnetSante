@@ -1,0 +1,37 @@
+.jauge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jauge img{
+    width: 75%;
+    height: 100%;
+}
+
+.cluster{
+    position: relative;
+    width: 50%;
+    bottom: 20px;
+    z-index: 2;
+    transform: rotate(180deg);
+    overflow: hidden;
+
+}
+.clusterLine{
+    width: 50%;
+    position: relative;
+    border-bottom: black solid 3px;
+}
+
+.logoRessource {
+    max-width: 15%;
+  }
+
+.btnRessource{
+    background-color: #72d9d7 !important;
+    margin: 0 !important;
+    width: 80%;
+    font-size:large;
+}

@@ -21,9 +21,14 @@ import MatiereDangereuse from './page/boiteAOutil/matiereDangereuse/matiereDange
 import MedecinFamille from './page/boiteAOutil/medecinFamille/medecinFamille.jsx';
 import TemperaturePression from './page/boiteAOutil/temperaturePression/temperaturePression.jsx';
 
-// import Ressource from './page/ressource/ressource.jsx';
-
 import Template from './template';
+import Ressource from './page/ressource/ressource.jsx';
+import Specialiste from './page/ressource/specialiste.jsx';
+import ModifierInfrastructure from './page/ressource/modifierInfrastructure';
+import ModifierAccompagnant from './page/ressource/modifierAccompagnant';
+import Accompagnant from './page/ressource/accompagnant';
+import Infrastructure from './page/ressource/infrastructure';
+import NumeroUrgence from './page/ressource/numeroUrgence';
 
 import {
   createBrowserRouter, Navigate,
@@ -88,14 +93,38 @@ const router = createBrowserRouter([
     path: "/boiteAOutil/temperaturePression",
     element: <TemperaturePression />,
   },
-  // {
-  //   path: "/ressource",
-  //   element: <Ressource />,
-  // },
+  {
+    path: "/ressource",
+    element: <Ressource />,
+  },
   {
     path: "/template",
     element: <Template />,
   },
+  {
+    path: "/ressource/specialiste",
+    element: <Specialiste />,
+  },
+  {
+    path: "/ressource/accompagnant",
+    element: <Accompagnant />,
+  },
+  {
+    path: "/ressource/infrastructure",
+    element: <Infrastructure />,
+  },
+  {
+    path: "/ressource/infrastructure/modifier",
+    element: <ModifierInfrastructure />,
+  },
+  {
+    path: "/ressource/accompagnant/modifier",
+    element: <ModifierAccompagnant />,
+  },
+  {
+    path: "/ressource/numeroUrgence",
+    element: <NumeroUrgence />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
