@@ -68,9 +68,9 @@ textarea{
     height: 3em;
     margin: 0 !important;
 }
-.btnGeneraliteAjouter{
+.btnGeneraliteAjouter, .btnGeneraliteSubmit {
     background-color: #213547 !important;
-    color: white;
+    color: white !important;
     margin: 0 !important;
     border-radius: 0;
     display: flex;

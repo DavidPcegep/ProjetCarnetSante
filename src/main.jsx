@@ -20,7 +20,6 @@ import CarteHopital from './page/boiteAOutil/carteHopital/carteHopital.jsx';
 import MatiereDangereuse from './page/boiteAOutil/matiereDangereuse/matiereDangereuse.jsx';
 import MedecinFamille from './page/boiteAOutil/medecinFamille/medecinFamille.jsx';
 import TemperaturePression from './page/boiteAOutil/temperaturePression/temperaturePression.jsx';
-
 import Template from './template';
 import Ressource from './page/ressource/ressource.jsx';
 import Specialiste from './page/ressource/specialiste.jsx';
@@ -29,12 +28,12 @@ import ModifierAccompagnant from './page/ressource/modifierAccompagnant';
 import Accompagnant from './page/ressource/accompagnant';
 import Infrastructure from './page/ressource/infrastructure';
 import NumeroUrgence from './page/ressource/numeroUrgence';
-
 import {
   createBrowserRouter, Navigate,
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
+
 
 const router = createBrowserRouter([
   {

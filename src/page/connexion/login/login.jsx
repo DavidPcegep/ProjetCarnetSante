@@ -3,9 +3,10 @@ import "./login.css"
 import backgroundLogin from '../../../assets/img/Logo/logoBackground.png';
 import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import { useState } from 'react';
-import { redirect } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cookies from 'universal-cookie';
+import * as path from "path";
 
 function Login() {
   const [inputs, setInputs] = useState({});
@@ -18,38 +19,39 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://172.16.6.116:8080/api/client/authentifier', {
+    fetch('http://127.0.0.1:8000/api/client/authentifier', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(inputs)
     })
-    .then(response => response.json())
-    .then(data => {
-      if(data[0]){
-        console.log("oui")
-        window.location.href = '/accueil';
-      }
-      else{
-        console.log("Erreur")
-        toast.error('Échec de la connexion!', {
-          position: "bottom-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          });
-      }
-    }
-    )
-    .catch((error) => {
-      console.error('Error:', error);
-    }
-    );
+        .then(response => response.json())
+        .then(data => {
+              if(data[0]){
+                var cookies = new Cookies();
+                cookies.set('id', 'oui', { path: '/' }, {httpOnly: true});
+                window.location.href = '/accueil';
+              }
+              else{
+                console.log("Erreur")
+                toast.error('Échec de la connexion!', {
+                  position: "bottom-center",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
+              }
+            }
+        )
+        .catch((error) => {
+              console.error('Error:', error);
+            }
+        );
   }
   return (
       <div className="Content">

@@ -4,7 +4,8 @@ import { useState } from 'react';
 import $ from "jquery";
 import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import Inputmask from "inputmask";
-import Navigation from "../../../extensions/navigation/navigation.jsx";
+import Navigation from "../../extensions/navigation/navigation.jsx";
+import Cookies from "universal-cookie";
 
 $(document).ready(function(){
     var inputGeneralitePharmacieTelephone = $("#inputGeneralitePharmacieTelephone");
@@ -57,8 +58,8 @@ $(document).ready(function(){
             var next = parseInt(current) + 1;
             $("#GeneraliteChirurgieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteChirurgieAjouter d-flex flex-row mt-4" data-current="'+next+'">\n' +
                 '                            <div class="inputAjouterContent inputAjouterChirugieContent w-100">\n' +
-                '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteChirurgieAjouter" name="inputGeneraliteChirugieOperation1" placeholder="Chirurgie/Opération #'+next+'"/>\n' +
-                '                                <input type="date" class="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate1" placeholder="Date #'+next+'"/>\n' +
+                '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteChirurgieAjouter" name="inputGeneraliteChirugieOperation'+next+'" placeholder="Chirurgie/Opération #'+next+'"/>\n' +
+                '                                <input type="date" class="form-control dateGeneraliteAjouter" name="inputGeneraliteChirugieOperationDate'+next+'" placeholder="Date #'+next+'"/>\n' +
                 '                            </div>\n' +
                 '                            <button type="button" class="btnGeneraliteAjouter btnGeneraliteChirurgieAjouter" data-current="'+next+'">Ajouter</button>\n' +
                 '                        </div>');
@@ -87,7 +88,7 @@ $(document).ready(function(){
             var next = parseInt(current) + 1;
             $("#GeneraliteAllergieAjouterContent").append('<div class="inputGroupGeneraliteAjouter inputGroupGeneraliteAllergieAjouter d-flex flex-row mt-4" data-current="'+next+'">\n' +
                 '                            <div class="inputAjouterContent inputAjouterAllergieContent w-100">\n' +
-                '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteAllergieAjouter" name="inputGeneraliteAllergie1" placeholder="Allergie #'+next+'"/>\n' +
+                '                                <input type="text" class="form-control inputGeneraliteAjouter inputGeneraliteAllergieAjouter" name="inputGeneraliteAllergie'+next+'" placeholder="Allergie #'+next+'"/>\n' +
                 '                            </div>\n' +
                 '                            <button type="button" class="btnGeneraliteAjouter btnGeneraliteAllergieAjouter" data-current="'+next+'">Ajouter</button>\n' +
                 '                        </div>');
@@ -112,6 +113,22 @@ $(document).ready(function(){
 
     });
 
+    $("#formGeneralite").on("submit", function (e) {
+        console.log("oui")
+        e.preventDefault();
+        var data = $(this).serializeArray();
+        console.log(data)
+        var url = "http://127.0.0.1:8000/api/generalite/enregistrer";
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: data,
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
 });
 
 function Generalite() {
@@ -128,6 +145,7 @@ function Generalite() {
         }
     };
 
+
     return (
     <div className="generaliteContent" onScroll={handleScroll} >
         {Navigation()}
@@ -140,7 +158,7 @@ function Generalite() {
         </div>
         <hr></hr>
           <div className="container">
-            <form>
+            <form id="formGeneralite">
                 <div className="form-control border-0">
                     <label form="selectGeneraliteGS">Groupe Sanguin</label>
                     <select type="text" className="form-control form-control-lg border-2" id="selectGeneraliteGS" name="selectGeneraliteGS" placeholder="Téléphone">
@@ -205,6 +223,9 @@ function Generalite() {
                             <button type="button" className="btnGeneraliteAjouter btnGeneraliteAllergieAjouter" data-current="1">Ajouter</button>
                         </div>
                     </div>
+                </div>
+                <div className="d-flex justify-content-end mt-3">
+                    <input type="submit" className="btn btn-lg" value="Enregistrer"/>
                 </div>
             </form>
         </div>
