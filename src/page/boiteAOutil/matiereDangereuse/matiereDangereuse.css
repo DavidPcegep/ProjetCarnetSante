@@ -54,3 +54,39 @@ i{
 .generaliteContent{
     overflow-y: auto !important;
 }
+
+.toxique img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.corrosif img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.inflammable img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.explosif img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 2em;
+}

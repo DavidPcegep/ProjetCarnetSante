@@ -54,3 +54,18 @@ i{
 .generaliteContent{
     overflow-y: auto !important;
 }
+
+.medecinFamilleContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cfde81;
+    font-size: 0.9em;
+    padding: 1.5em;
+}
+
+.important {
+    color: black;
+    font-weight: bold;
+    background-color: #C0C0C0;
+}

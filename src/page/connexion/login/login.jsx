@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./login.css"
-import backgroundLogin from '../../assets/img/Logo/logoBackground.png';
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import backgroundLogin from '../../../assets/img/Logo/logoBackground.png';
+import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

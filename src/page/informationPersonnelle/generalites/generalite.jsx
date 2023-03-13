@@ -2,15 +2,12 @@ import * as React from "react";
 import "./generalite.css"
 import { useState } from 'react';
 import $ from "jquery";
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import logoMonCarnetSante from "../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import Inputmask from "inputmask";
 import Navigation from "../../extensions/navigation/navigation.jsx";
 import Cookies from "universal-cookie";
 
 $(document).ready(function(){
-    var cookies = new Cookies();
-    var id = cookies.get('id');
-    console.log(document.cookie);
     var inputGeneralitePharmacieTelephone = $("#inputGeneralitePharmacieTelephone");
     var im = new Inputmask("999-999-9999");
     im.mask(inputGeneralitePharmacieTelephone);

@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./quizz.css";
-import sentimentInverse1 from "../../extensions/sentiment/sentimentInverse/sentimentInverse1.jsx";
-import sentimentInverse2 from "../../extensions/sentiment/sentimentInverse/sentimentInverse2.jsx";
-import sentimentInverse3 from "../../extensions/sentiment/sentimentInverse/sentimentInverse3.jsx";
-import sentimentInverse4 from "../../extensions/sentiment/sentimentInverse/sentimentInverse4.jsx";
-import sentimentInverse5 from "../../extensions/sentiment/sentimentInverse/sentimentInverse5.jsx";
-import logoMonCarnetSante from "../../assets/img/Logo/MonCarnetDeSanteTitre.png";
+import sentimentInverse1 from "../../../../extensions/sentiment/sentimentInverse/sentimentInverse1.jsx";
+import sentimentInverse2 from "../../../../extensions/sentiment/sentimentInverse/sentimentInverse2.jsx";
+import sentimentInverse3 from "../../../../extensions/sentiment/sentimentInverse/sentimentInverse3.jsx";
+import sentimentInverse4 from "../../../../extensions/sentiment/sentimentInverse/sentimentInverse4.jsx";
+import sentimentInverse5 from "../../../../extensions/sentiment/sentimentInverse/sentimentInverse5.jsx";
+import logoMonCarnetSante from "../../../../assets/img/Logo/MonCarnetDeSanteTitre.png";
 import $ from "jquery";
 function Quizz() {
     return (
