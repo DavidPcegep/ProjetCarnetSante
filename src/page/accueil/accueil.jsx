@@ -9,13 +9,13 @@ import logoGPS from "../../assets/img/Grandes Sections et pochettes/GPS.png";
 //
 // ########## SALUT ENZO ###########
 // 
-function Acceuil() {
+function Accueil() {
   return (
     // Créer une page d'accueil avec des buttons pour naviguer vers les différentes pages en HTML/CSS
     <div>
         <div className="Content">
           <a href="/login" className="position-absolute start-0 me-2 p-3 fs-1">
-            <i class="btn-exit bi bi-box-arrow-left"></i>
+            <i className="btn-exit bi bi-box-arrow-left"></i>
           </a>
           <div className="logoContent">
               <img src={logoMonCarnetSante} alt="LogoMonCarnetSante" />
@@ -39,4 +39,4 @@ function Acceuil() {
 }
 
 
-export default Acceuil;
+export default Accueil;

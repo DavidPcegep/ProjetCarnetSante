@@ -15,12 +15,12 @@ import CarteHopital from './page/boiteAOutil/carteHopital/carteHopital.jsx';
 import MatiereDangereuse from './page/boiteAOutil/matiereDangereuse/matiereDangereuse.jsx';
 import MedecinFamille from './page/boiteAOutil/medecinFamille/medecinFamille.jsx';
 import TemperaturePression from './page/boiteAOutil/temperaturePression/temperaturePression.jsx';
-import { Navigate } from "react-router-dom";
 import {
   createBrowserRouter, Navigate,
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+
 
 
 const router = createBrowserRouter([
